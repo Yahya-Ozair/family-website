@@ -1,0 +1,15 @@
+<h2>What should we eat tomorrow?</h2>
+
+<button onclick="vote('Pizza')">Pizza</button>
+<button onclick="vote('Biryani')">Biryani</button>
+<button onclick="vote('Pasta')">Pasta</button>
+
+<p id="result"></p>
+
+<script>
+function vote(food){
+localStorage.setItem("vote",food)
+document.getElementById("result").innerText =
+"You voted for: " + food
+}
+</script>
