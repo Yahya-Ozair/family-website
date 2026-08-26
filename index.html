@@ -1,1143 +1,1313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Zero to Brand — Build Your Brand From ₹0</title>
-
-<meta name="description"
-content="Zero to Brand — learn how to build a brand from zero. Join the free community.">
-
-<style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:
-  Inter,
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  Roboto,
-  Arial,
-  sans-serif;
-
-  background:#050505;
-  color:#fff;
-  line-height:1.5;
-  overflow-x:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.container{
-  width:min(92%,1000px);
-  margin:auto;
-}
-
-/* =========================
-   BACKGROUND
-========================= */
-
-body::before{
-  content:"";
-  position:fixed;
-  width:500px;
-  height:500px;
-  top:-200px;
-  left:50%;
-  transform:translateX(-50%);
-  background:rgba(255,255,255,.055);
-  filter:blur(100px);
-  pointer-events:none;
-  z-index:-1;
-}
-
-/* =========================
-   NAV
-========================= */
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:1000;
-
-  background:rgba(5,5,5,.78);
-  backdrop-filter:blur(18px);
-
-  border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.nav-inner{
-  height:66px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  font-size:16px;
-  font-weight:900;
-  letter-spacing:-.5px;
-}
-
-.nav-button{
-  background:#fff;
-  color:#050505;
-
-  padding:9px 15px;
-  border-radius:9px;
-
-  font-size:12px;
-  font-weight:900;
-}
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Zero to Brand — Start From ₹0</title>
+
+  <meta name="description"
+        content="Learn the fundamentals of building a real brand from zero. Join the free Zero to Brand community.">
+
+  <meta name="theme-color" content="#050505">
+
+  <style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background:#050505;
+      color:#fff;
 
-/* =========================
-   HERO
-========================= */
+      line-height:1.5;
 
-.hero{
-  padding:75px 0 55px;
-  text-align:center;
-}
+      overflow-x:hidden;
+    }
 
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
 
-  padding:8px 14px;
+    img{
+      max-width:100%;
+    }
 
-  border:1px solid rgba(255,255,255,.13);
-  background:rgba(255,255,255,.045);
+    button{
+      font-family:inherit;
+    }
 
-  border-radius:100px;
+    .container{
+      width:min(92%,1080px);
+      margin:auto;
+    }
 
-  font-size:11px;
-  font-weight:800;
 
-  color:#d8d8d8;
+    /* =========================================================
+       BACKGROUND
+    ========================================================= */
 
-  margin-bottom:24px;
-}
+    .ambient{
+      position:fixed;
+      pointer-events:none;
+      z-index:-1;
+      border-radius:50%;
+      filter:blur(100px);
+      opacity:.25;
+    }
 
-.live-dot{
-  width:7px;
-  height:7px;
-  background:#38e27b;
-  border-radius:50%;
-  box-shadow:0 0 12px #38e27b;
-}
+    .ambient.one{
+      width:420px;
+      height:420px;
+      top:-180px;
+      left:-160px;
+      background:#ffffff;
+    }
 
-h1{
-  font-size:clamp(48px,10vw,88px);
-  line-height:.92;
-  letter-spacing:-5px;
-  font-weight:950;
+    .ambient.two{
+      width:360px;
+      height:360px;
+      right:-180px;
+      top:520px;
+      background:#777;
+    }
 
-  max-width:900px;
-  margin:auto;
-}
 
-.gradient{
-  background:linear-gradient(
-    110deg,
-    #fff 10%,
-    #bdbdbd 50%,
-    #fff 90%
-  );
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
 
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
+    nav{
+      position:sticky;
+      top:0;
+      z-index:9999;
 
-.hero-text{
-  max-width:610px;
+      background:rgba(5,5,5,.78);
 
-  margin:25px auto 0;
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
 
-  color:#999;
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
 
-  font-size:17px;
-}
+    .nav-inner{
+      height:68px;
 
-/* =========================
-   CTA
-========================= */
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
 
-.cta{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+    .brand{
+      font-size:15px;
+      font-weight:950;
 
-  margin-top:29px;
+      letter-spacing:-.5px;
+    }
 
-  padding:17px 27px;
+    .brand span{
+      color:#777;
+    }
 
-  background:#fff;
-  color:#050505;
+    .nav-cta{
+      display:flex;
+      align-items:center;
+      justify-content:center;
 
-  border-radius:13px;
+      padding:9px 15px;
 
-  font-size:14px;
-  font-weight:900;
+      border-radius:9px;
 
-  box-shadow:
-  0 0 0 1px rgba(255,255,255,.15),
-  0 15px 45px rgba(255,255,255,.08);
+      background:#fff;
+      color:#050505;
 
-  transition:.2s;
-}
+      font-size:11px;
+      font-weight:950;
 
-.cta:hover{
-  transform:translateY(-3px);
-  box-shadow:
-  0 0 0 1px rgba(255,255,255,.3),
-  0 20px 55px rgba(255,255,255,.13);
-}
+      transition:.2s;
+    }
 
-.cta-note{
-  margin-top:10px;
+    .nav-cta:hover{
+      transform:translateY(-1px);
+    }
 
-  font-size:11px;
 
-  color:#666;
-}
+    /* =========================================================
+       HERO
+    ========================================================= */
 
-/* =========================
-   IMAGE
-========================= */
+    .hero{
+      position:relative;
 
-.image-card{
-  max-width:760px;
+      text-align:center;
 
-  margin:45px auto 0;
+      padding:82px 0 55px;
+    }
 
-  padding:8px;
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
 
-  border-radius:23px;
+      padding:8px 13px;
 
-  background:
-  linear-gradient(
-    145deg,
-    rgba(255,255,255,.18),
-    rgba(255,255,255,.025)
-  );
+      border:1px solid rgba(255,255,255,.12);
 
-  box-shadow:
-  0 30px 100px rgba(0,0,0,.5);
-}
+      background:rgba(255,255,255,.035);
 
-.image-card img{
-  width:100%;
-  height:390px;
+      border-radius:100px;
 
-  object-fit:cover;
+      color:#cfcfcf;
 
-  display:block;
+      font-size:10px;
+      font-weight:850;
 
-  border-radius:17px;
+      letter-spacing:.7px;
 
-  background:#111;
-}
+      margin-bottom:25px;
+    }
 
-/* =========================
-   VALUE BAR
-========================= */
+    .pulse{
+      width:7px;
+      height:7px;
 
-.value-bar{
-  margin:30px auto 0;
+      border-radius:50%;
 
-  max-width:720px;
+      background:#38df7a;
 
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
+      box-shadow:
+        0 0 0 4px rgba(56,223,122,.08),
+        0 0 16px rgba(56,223,122,.6);
+    }
 
-.value-pill{
-  padding:9px 13px;
+    .hero h1{
+      max-width:940px;
 
-  border:1px solid rgba(255,255,255,.09);
+      margin:auto;
 
-  background:rgba(255,255,255,.035);
+      font-size:
+        clamp(48px,10vw,92px);
 
-  border-radius:100px;
+      line-height:.9;
 
-  color:#aaa;
+      letter-spacing:-6px;
 
-  font-size:11px;
-}
+      font-weight:950;
+    }
 
-/* =========================
-   SECTIONS
-========================= */
+    .hero h1 .muted{
+      color:#555;
+    }
 
-section{
-  padding:75px 0;
-}
+    .hero h1 .shine{
+      background:
+        linear-gradient(
+          110deg,
+          #ffffff 0%,
+          #bcbcbc 48%,
+          #ffffff 100%
+        );
 
-.section-title{
-  text-align:center;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
 
-  font-size:clamp(34px,7vw,55px);
+    .hero-description{
+      max-width:620px;
 
-  line-height:1;
+      margin:27px auto 0;
 
-  letter-spacing:-3px;
+      color:#8c8c8c;
 
-  font-weight:950;
-}
+      font-size:16px;
+    }
 
-.section-description{
-  max-width:580px;
+    .hero-description strong{
+      color:#dcdcdc;
+    }
 
-  text-align:center;
 
-  margin:17px auto 40px;
+    /* =========================================================
+       HERO CTA
+    ========================================================= */
 
-  color:#777;
+    .hero-actions{
+      margin-top:29px;
 
-  font-size:15px;
-}
+      display:flex;
 
-/* =========================
-   VALUE STACK
-========================= */
+      align-items:center;
+      justify-content:center;
 
-.value-stack{
-  max-width:760px;
+      gap:10px;
 
-  margin:auto;
+      flex-wrap:wrap;
+    }
 
-  border:1px solid rgba(255,255,255,.09);
+    .primary-btn{
+      display:inline-flex;
 
-  background:
-  linear-gradient(
-    145deg,
-    rgba(255,255,255,.06),
-    rgba(255,255,255,.02)
-  );
+      align-items:center;
+      justify-content:center;
 
-  border-radius:23px;
+      min-height:52px;
 
-  overflow:hidden;
-}
+      padding:0 23px;
 
-.value-row{
-  display:flex;
+      border-radius:12px;
 
-  align-items:center;
+      background:#fff;
+      color:#050505;
 
-  justify-content:space-between;
+      font-size:13px;
+      font-weight:950;
 
-  gap:20px;
+      box-shadow:
+        0 15px 45px rgba(255,255,255,.08);
 
-  padding:21px;
+      transition:.2s;
+    }
 
-  border-bottom:1px solid rgba(255,255,255,.07);
-}
+    .primary-btn:hover{
+      transform:translateY(-3px);
 
-.value-row:last-child{
-  border-bottom:0;
-}
+      box-shadow:
+        0 20px 55px rgba(255,255,255,.14);
+    }
 
-.value-left{
-  display:flex;
+    .secondary-btn{
+      display:inline-flex;
 
-  align-items:center;
+      align-items:center;
+      justify-content:center;
 
-  gap:14px;
-}
+      min-height:52px;
 
-.value-icon{
-  width:38px;
-  height:38px;
+      padding:0 21px;
 
-  display:flex;
+      border-radius:12px;
 
-  align-items:center;
-  justify-content:center;
+      background:rgba(255,255,255,.045);
 
-  border-radius:11px;
+      border:1px solid rgba(255,255,255,.1);
 
-  background:#151515;
+      color:#ddd;
 
-  border:1px solid rgba(255,255,255,.08);
+      font-size:13px;
+      font-weight:800;
 
-  font-size:13px;
-}
+      transition:.2s;
+    }
 
-.value-name{
-  font-size:14px;
-  font-weight:750;
-}
+    .secondary-btn:hover{
+      background:rgba(255,255,255,.08);
+    }
 
-.value-desc{
-  color:#666;
-  font-size:11px;
-  margin-top:2px;
-}
+    .microcopy{
+      margin-top:12px;
 
-.free{
-  color:#5ee58d;
+      color:#505050;
 
-  font-size:12px;
+      font-size:10px;
+    }
 
-  font-weight:900;
-}
 
-/* =========================
-   JOURNEY
-========================= */
+    /* =========================================================
+       HERO IMAGE
+    ========================================================= */
 
-.journey{
-  max-width:760px;
+    .hero-visual{
+      max-width:800px;
 
-  margin:auto;
+      margin:48px auto 0;
 
-  display:grid;
+      padding:7px;
 
-  gap:10px;
-}
+      border-radius:24px;
 
-.journey-item{
-  display:flex;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.18),
+          rgba(255,255,255,.02)
+        );
 
-  align-items:center;
+      box-shadow:
+        0 35px 100px rgba(0,0,0,.55);
+    }
 
-  gap:15px;
+    .hero-visual img{
+      width:100%;
 
-  padding:19px;
+      height:400px;
 
-  border-radius:15px;
+      object-fit:cover;
 
-  background:#0b0b0b;
+      display:block;
 
-  border:1px solid rgba(255,255,255,.07);
-}
+      border-radius:18px;
 
-.number{
-  width:38px;
-  height:38px;
+      background:#111;
+    }
 
-  min-width:38px;
 
-  display:flex;
+    /* =========================================================
+       TRUST STRIP
+    ========================================================= */
 
-  align-items:center;
-  justify-content:center;
+    .trust-strip{
+      display:flex;
 
-  background:#fff;
+      justify-content:center;
+      align-items:center;
 
-  color:#050505;
+      flex-wrap:wrap;
 
-  border-radius:10px;
+      gap:8px;
 
-  font-size:11px;
+      margin:27px auto 0;
+    }
 
-  font-weight:950;
-}
+    .trust-item{
+      padding:9px 12px;
 
-.journey-item h3{
-  font-size:15px;
-}
+      border:1px solid rgba(255,255,255,.07);
 
-.journey-item p{
-  color:#666;
+      border-radius:100px;
 
-  font-size:12px;
+      background:rgba(255,255,255,.025);
 
-  margin-top:2px;
-}
+      color:#777;
 
-/* =========================
-   BIG CTA
-========================= */
+      font-size:10px;
+      font-weight:750;
+    }
 
-.cta-section{
-  padding:25px 0 80px;
-}
 
-.cta-box{
-  position:relative;
+    /* =========================================================
+       SECTIONS
+    ========================================================= */
 
-  overflow:hidden;
+    section{
+      padding:82px 0;
+    }
 
-  text-align:center;
+    .section-eyebrow{
+      text-align:center;
 
-  padding:60px 25px;
+      color:#666;
 
-  border-radius:28px;
+      font-size:10px;
 
-  border:1px solid rgba(255,255,255,.11);
+      font-weight:900;
 
-  background:
-  radial-gradient(
-    circle at 50% 0%,
-    rgba(255,255,255,.10),
-    transparent 55%
-  ),
-  #0b0b0b;
+      letter-spacing:1.5px;
 
-  box-shadow:0 30px 100px rgba(0,0,0,.35);
-}
+      margin-bottom:13px;
+    }
 
-.cta-box h2{
-  font-size:clamp(35px,8vw,60px);
+    .section-title{
+      text-align:center;
 
-  line-height:.95;
+      max-width:750px;
 
-  letter-spacing:-3px;
+      margin:auto;
 
-  font-weight:950;
-}
+      font-size:
+        clamp(34px,7vw,58px);
 
-.cta-box p{
-  max-width:520px;
+      line-height:.96;
 
-  margin:18px auto 25px;
+      letter-spacing:-3.5px;
 
-  color:#777;
+      font-weight:950;
+    }
 
-  font-size:14px;
-}
+    .section-subtitle{
+      max-width:590px;
 
-.whatsapp{
-  display:inline-flex;
+      margin:17px auto 42px;
 
-  align-items:center;
-  justify-content:center;
+      text-align:center;
 
-  padding:16px 25px;
+      color:#777;
 
-  border-radius:12px;
+      font-size:14px;
+    }
 
-  background:#25d366;
 
-  color:#fff;
+    /* =========================================================
+       VALUE CARDS
+    ========================================================= */
 
-  font-size:14px;
+    .cards{
+      display:grid;
 
-  font-weight:900;
+      grid-template-columns:
+        repeat(3,1fr);
 
-  box-shadow:0 12px 35px rgba(37,211,102,.12);
+      gap:12px;
 
-  transition:.2s;
-}
+      max-width:900px;
 
-.whatsapp:hover{
-  transform:translateY(-3px);
-  filter:brightness(1.05);
-}
+      margin:auto;
+    }
 
-.free-text{
-  margin-top:11px;
+    .card{
+      position:relative;
 
-  color:#555;
+      padding:24px;
 
-  font-size:11px;
-}
+      min-height:205px;
 
-/* =========================
-   FINAL
-========================= */
+      border-radius:19px;
 
-.final{
-  text-align:center;
+      border:1px solid rgba(255,255,255,.08);
 
-  padding:30px 0 100px;
-}
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.055),
+          rgba(255,255,255,.018)
+        );
 
-.final h2{
-  max-width:700px;
+      overflow:hidden;
 
-  margin:auto;
+      transition:.25s;
+    }
 
-  font-size:clamp(38px,8vw,65px);
+    .card:hover{
+      transform:translateY(-4px);
 
-  line-height:.95;
+      border-color:
+        rgba(255,255,255,.15);
+    }
 
-  letter-spacing:-3px;
+    .card-number{
+      width:35px;
+      height:35px;
 
-  font-weight:950;
-}
+      display:flex;
 
-.final p{
-  max-width:500px;
+      align-items:center;
+      justify-content:center;
 
-  margin:18px auto 25px;
+      border-radius:10px;
 
-  color:#777;
+      background:#111;
 
-  font-size:14px;
-}
+      border:1px solid rgba(255,255,255,.08);
 
-/* =========================
-   FOOTER
-========================= */
+      color:#ddd;
 
-footer{
-  border-top:1px solid rgba(255,255,255,.07);
+      font-size:10px;
 
-  padding:25px 0;
+      font-weight:950;
 
-  text-align:center;
+      margin-bottom:28px;
+    }
 
-  color:#444;
+    .card h3{
+      font-size:16px;
 
-  font-size:11px;
-}
+      margin-bottom:7px;
 
-/* =========================
-   MOBILE
-========================= */
+      font-weight:850;
+    }
 
-@media(max-width:650px){
+    .card p{
+      color:#6f6f6f;
 
-  .hero{
-    padding-top:55px;
-  }
+      font-size:12px;
+    }
 
-  h1{
-    letter-spacing:-3px;
-  }
 
-  .hero-text{
-    font-size:15px;
-  }
+    /* =========================================================
+       VALUE STACK
+    ========================================================= */
 
-  .cta{
-    width:100%;
-    max-width:360px;
-  }
+    .value-box{
+      max-width:820px;
 
-  .image-card img{
-    height:270px;
-  }
+      margin:45px auto 0;
 
-  section{
-    padding:58px 0;
-  }
+      border-radius:22px;
 
-  .value-row{
-    padding:18px;
-  }
+      border:1px solid rgba(255,255,255,.09);
 
-  .value-name{
-    font-size:13px;
-  }
+      background:#0a0a0a;
 
-  .value-desc{
-    font-size:10px;
-  }
+      overflow:hidden;
+    }
 
-  .cta-box{
-    border-radius:22px;
-    padding:48px 20px;
-  }
+    .value-header{
+      display:flex;
 
-  .whatsapp{
-    width:100%;
-    max-width:350px;
-  }
-}
+      align-items:center;
+      justify-content:space-between;
 
-@media(max-width:400px){
+      padding:20px 22px;
 
-  h1{
-    font-size:44px;
-  }
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.06),
+          transparent
+        );
 
-  .logo{
-    font-size:14px;
-  }
+      border-bottom:
+        1px solid rgba(255,255,255,.07);
+    }
 
-  .nav-button{
-    padding:8px 11px;
-    font-size:10px;
-  }
+    .value-header strong{
+      font-size:13px;
+    }
 
-  .image-card img{
-    height:225px;
-  }
-}
+    .value-header span{
+      padding:6px 9px;
 
-</style>
+      border-radius:7px;
+
+      background:rgba(56,223,122,.08);
+
+      color:#5ee98f;
+
+      font-size:9px;
+
+      font-weight:900;
+    }
+
+    .value-row{
+      display:flex;
+
+      align-items:center;
+      justify-content:space-between;
+
+      gap:15px;
+
+      padding:19px 22px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.055);
+    }
+
+    .value-row:last-child{
+      border-bottom:0;
+    }
+
+    .value-content{
+      display:flex;
+
+      align-items:center;
+
+      gap:13px;
+    }
+
+    .value-icon{
+      width:35px;
+      height:35px;
+
+      min-width:35px;
+
+      display:flex;
+
+      align-items:center;
+      justify-content:center;
+
+      border-radius:9px;
+
+      background:#121212;
+
+      color:#aaa;
+
+      font-size:10px;
+
+      font-weight:900;
+    }
+
+    .value-name{
+      font-size:13px;
+      font-weight:800;
+    }
+
+    .value-desc{
+      margin-top:2px;
+
+      color:#555;
+
+      font-size:10px;
+    }
+
+    .free{
+      color:#5ee98f;
+
+      font-size:10px;
+
+      font-weight:950;
+    }
+
+
+    /* =========================================================
+       ROADMAP
+    ========================================================= */
+
+    .roadmap{
+      max-width:780px;
+
+      margin:42px auto 0;
+
+      position:relative;
+    }
+
+    .roadmap::before{
+      content:"";
+
+      position:absolute;
+
+      left:19px;
+
+      top:25px;
+
+      bottom:25px;
+
+      width:1px;
+
+      background:
+        linear-gradient(
+          #333,
+          transparent
+        );
+    }
+
+    .roadmap-item{
+      position:relative;
+
+      display:flex;
+
+      gap:18px;
+
+      padding-bottom:16px;
+    }
+
+    .roadmap-item:last-child{
+      padding-bottom:0;
+    }
+
+    .roadmap-number{
+      position:relative;
+      z-index:2;
+
+      width:39px;
+      height:39px;
+
+      min-width:39px;
+
+      display:flex;
+
+      align-items:center;
+      justify-content:center;
+
+      border-radius:11px;
+
+      background:#111;
+
+      border:1px solid rgba(255,255,255,.1);
+
+      color:#ddd;
+
+      font-size:10px;
+
+      font-weight:950;
+    }
+
+    .roadmap-content{
+      flex:1;
+
+      padding:3px 0 20px;
+    }
+
+    .roadmap-content h3{
+      font-size:15px;
+
+      margin-bottom:4px;
+    }
+
+    .roadmap-content p{
+      color:#666;
+
+      font-size:12px;
+
+      max-width:580px;
+    }
+
+
+    /* =========================================================
+       PREMIUM CTA
+    ========================================================= */
+
+    .cta-section{
+      padding-top:25px;
+    }
+
+    .cta-box{
+      position:relative;
+
+      overflow:hidden;
+
+      text-align:center;
+
+      padding:70px 25px;
+
+      border-radius:29px;
+
+      border:
+        1px solid rgba(255,255,255,.12);
+
+      background:
+        radial-gradient(
+          circle at 50% -20%,
+          rgba(255,255,255,.12),
+          transparent 55%
+        ),
+        #0a0a0a;
+
+      box-shadow:
+        0 35px 100px rgba(0,0,0,.4);
+    }
+
+    .cta-box::after{
+      content:"";
+
+      position:absolute;
+
+      width:300px;
+      height:300px;
+
+      left:50%;
+      bottom:-250px;
+
+      transform:translateX(-50%);
+
+      background:rgba(255,255,255,.06);
+
+      filter:blur(70px);
+
+      border-radius:50%;
+    }
+
+    .cta-label{
+      display:inline-block;
+
+      padding:7px 10px;
+
+      border-radius:7px;
+
+      background:rgba(255,255,255,.06);
+
+      color:#aaa;
+
+      font-size:9px;
+
+      font-weight:900;
+
+      letter-spacing:1px;
+
+      margin-bottom:17px;
+    }
+
+    .cta-box h2{
+      position:relative;
+      z-index:2;
+
+      max-width:700px;
+
+      margin:auto;
+
+      font-size:
+        clamp(37px,8vw,66px);
+
+      line-height:.93;
+
+      letter-spacing:-4px;
+
+      font-weight:950;
+    }
+
+    .cta-box p{
+      position:relative;
+      z-index:2;
+
+      max-width:530px;
+
+      margin:19px auto 27px;
+
+      color:#777;
+
+      font-size:14px;
+    }
+
+    .whatsapp-btn{
+      position:relative;
+      z-index:2;
+
+      display:inline-flex;
+
+      align-items:center;
+      justify-content:center;
+
+      min-height:52px;
+
+      padding:0 24px;
+
+      border-radius:12px;
+
+      background:#25d366;
+
+      color:#fff;
+
+      font-size:13px;
+
+      font-weight:950;
+
+      box-shadow:
+        0 15px 40px rgba(37,211,102,.1);
+
+      transition:.2s;
+    }
+
+    .whatsapp-btn:hover{
+      transform:translateY(-3px);
+
+      box-shadow:
+        0 20px 50px rgba(37,211,102,.16);
+    }
+
+    .cta-note{
+      position:relative;
+      z-index:2;
+
+      margin-top:11px;
+
+      color:#4d4d4d;
+
+      font-size:10px;
+    }
+
+
+    /* =========================================================
+       FAQ
+    ========================================================= */
+
+    .faq{
+      max-width:760px;
+
+      margin:42px auto 0;
+    }
+
+    details{
+      border-bottom:
+        1px solid rgba(255,255,255,.08);
+    }
+
+    details:first-child{
+      border-top:
+        1px solid rgba(255,255,255,.08);
+    }
+
+    summary{
+      cursor:pointer;
+
+      list-style:none;
+
+      padding:20px 4px;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:space-between;
+
+      gap:15px;
+
+      font-size:14px;
+
+      font-weight:800;
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+
+    summary::after{
+      content:"+";
+
+      color:#666;
+
+      font-size:20px;
+
+      font-weight:300;
+    }
+
+    details[open] summary::after{
+      content:"−";
+    }
+
+    details p{
+      padding:0 30px 20px 4px;
+
+      color:#666;
+
+      font-size:12px;
+
+      max-width:650px;
+    }
+
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+    .final{
+      text-align:center;
+
+      padding:85px 0 105px;
+    }
+
+    .final h2{
+      max-width:720px;
+
+      margin:auto;
+
+      font-size:
+        clamp(39px,8vw,68px);
+
+      line-height:.93;
+
+      letter-spacing:-4px;
+
+      font-weight:950;
+    }
+
+    .final p{
+      max-width:500px;
+
+      margin:18px auto 26px;
+
+      color:#707070;
+
+      font-size:14px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer{
+      border-top:
+        1px solid rgba(255,255,255,.07);
+
+      padding:27px 0;
+
+      text-align:center;
+
+      color:#414141;
+
+      font-size:10px;
+    }
+
+
+    /* =========================================================
+       MOBILE STICKY CTA
+    ========================================================= */
+
+    .mobile-cta{
+      display:none;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media(max-width:800px){
+
+      .cards{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero-visual img{
+        height:330px;
+      }
+    }
+
+
+    @media(max-width:600px){
+
+      .container{
+        width:min(92%,500px);
+      }
+
+      .nav-inner{
+        height:62px;
+      }
+
+      .hero{
+        padding:58px 0 42px;
+      }
+
+      .hero h1{
+        letter-spacing:-3.5px;
+      }
+
+      .hero-description{
+        font-size:14px;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+
+        width:100%;
+      }
+
+      .primary-btn,
+      .secondary-btn{
+        width:100%;
+
+        max-width:360px;
+      }
+
+      .hero-visual{
+        margin-top:37px;
+      }
+
+      .hero-visual img{
+        height:270px;
+      }
+
+      section{
+        padding:62px 0;
+      }
+
+      .section-title{
+        letter-spacing:-2.5px;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .card{
+        min-height:auto;
+      }
+
+      .value-row{
+        padding:17px;
+      }
+
+      .value-desc{
+        max-width:210px;
+      }
+
+      .roadmap::before{
+        left:18px;
+      }
+
+      .cta-box{
+        padding:53px 20px;
+        border-radius:23px;
+      }
+
+      .cta-box h2{
+        letter-spacing:-3px;
+      }
+
+      .whatsapp-btn{
+        width:100%;
+        max-width:350px;
+      }
+
+      .final{
+        padding:65px 0 100px;
+      }
+
+      /* Sticky mobile CTA */
+
+      .mobile-cta{
+        display:flex;
+
+        position:fixed;
+
+        left:0;
+        right:0;
+        bottom:0;
+
+        z-index:99999;
+
+        padding:9px 12px;
+
+        background:
+          rgba(5,5,5,.92);
+
+        backdrop-filter:blur(15px);
+
+        border-top:
+          1px solid rgba(255,255,255,.1);
+      }
+
+      .mobile-cta a{
+        width:100%;
+
+        min-height:48px;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        border-radius:11px;
+
+        background:#25d366;
+
+        color:#fff;
+
+        font-size:12px;
+
+        font-weight:950;
+      }
+
+      footer{
+        padding-bottom:82px;
+      }
+    }
+
+
+    @media(max-width:390px){
+
+      .hero h1{
+        font-size:44px;
+      }
+
+      .hero-visual img{
+        height:230px;
+      }
+
+      .value-name{
+        font-size:12px;
+      }
+
+      .value-desc{
+        font-size:9px;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-<!-- NAV -->
+
+<!-- =========================================================
+     AMBIENT BACKGROUND
+========================================================= -->
+
+<div class="ambient one"></div>
+<div class="ambient two"></div>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
 <nav>
+
   <div class="container nav-inner">
 
-    <div class="logo">
-      ZERO TO BRAND
-    </div>
+    <a href="#" class="brand">
+      ZERO <span>TO</span> BRAND
+    </a>
 
     <a
       href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
       target="_blank"
       rel="noopener"
-      class="nav-button"
+      class="nav-cta"
     >
       JOIN FREE →
     </a>
 
   </div>
+
 </nav>
 
 
-<!-- HERO -->
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main>
 
 <section class="hero">
 
   <div class="container">
 
-    <div class="badge">
-      <span class="live-dot"></span>
-      FREE ACCESS • LIMITED COMMUNITY
+    <div class="eyebrow">
+      <span class="pulse"></span>
+      FREE COMMUNITY • START FROM ZERO
     </div>
+
 
     <h1>
-      From <span class="gradient">₹0</span>
+
+      You don't need
+      <span class="muted">millions.</span>
+
       <br>
-      To Your First <span class="gradient">Brand.</span>
+
+      You need a
+      <span class="shine">starting point.</span>
+
     </h1>
 
-    <p class="hero-text">
-      A practical community for people who want to understand
-      how a real brand is built — from the first idea to launch.
-    </p>
 
-    <a
-      href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-      target="_blank"
-      rel="noopener"
-      class="cta"
-    >
-      JOIN THE FREE COMMUNITY →
-    </a>
+    <p class="hero-description">
 
-    <div class="cta-note">
-      No payment • No complicated signup
-    </div>
+      <strong>Zero to Brand</strong> is a free community
+      for people who want to understand how a real brand
+      is built — from the first idea to launch and growth.
 
-
-    <div class="image-card">
-
-      <img
-        src="https://cdn.corenexis.com/f/2xRtJcl7gVH.jpeg"
-        alt="Zero to Brand"
-      >
-
-    </div>
-
-
-    <div class="value-bar">
-
-      <div class="value-pill">
-        BRAND BUILDING
-      </div>
-
-      <div class="value-pill">
-        PRODUCT
-      </div>
-
-      <div class="value-pill">
-        MARKETING
-      </div>
-
-      <div class="value-pill">
-        LAUNCH
-      </div>
-
-      <div class="value-pill">
-        GROWTH
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- VALUE -->
-
-<section>
-
-  <div class="container">
-
-    <h2 class="section-title">
-      What you're getting.
-    </h2>
-
-    <p class="section-description">
-      Think of this as your starting point for understanding
-      the complete brand-building journey.
     </p>
 
 
-    <div class="value-stack">
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="value-icon">
-            01
-          </div>
-
-          <div>
-            <div class="value-name">
-              Finding the Right Opportunity
-            </div>
-
-            <div class="value-desc">
-              Products, markets and ideas
-            </div>
-          </div>
-
-        </div>
-
-        <div class="free">
-          FREE
-        </div>
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="value-icon">
-            02
-          </div>
-
-          <div>
-            <div class="value-name">
-              Building Your Brand
-            </div>
-
-            <div class="value-desc">
-              Name, identity, positioning & offer
-            </div>
-          </div>
-
-        </div>
-
-        <div class="free">
-          FREE
-        </div>
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="value-icon">
-            03
-          </div>
-
-          <div>
-            <div class="value-name">
-              Product & Launch
-            </div>
-
-            <div class="value-desc">
-              Turning your idea into something real
-            </div>
-          </div>
-
-        </div>
-
-        <div class="free">
-          FREE
-        </div>
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="value-icon">
-            04
-          </div>
-
-          <div>
-            <div class="value-name">
-              Marketing & Growth
-            </div>
-
-            <div class="value-desc">
-              Attention, customers and growth
-            </div>
-          </div>
-
-        </div>
-
-        <div class="free">
-          FREE
-        </div>
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="value-icon">
-            05
-          </div>
-
-          <div>
-            <div class="value-name">
-              Community & Resources
-            </div>
-
-            <div class="value-desc">
-              Learn, ask questions and build together
-            </div>
-          </div>
-
-        </div>
-
-        <div class="free">
-          FREE
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- JOURNEY -->
-
-<section>
-
-  <div class="container">
-
-    <h2 class="section-title">
-      The roadmap.
-    </h2>
-
-    <p class="section-description">
-      Start at zero. Understand every important step.
-    </p>
-
-
-    <div class="journey">
-
-      <div class="journey-item">
-
-        <div class="number">
-          01
-        </div>
-
-        <div>
-
-          <h3>
-            Find an opportunity
-          </h3>
-
-          <p>
-            Understand products, customers and markets.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="journey-item">
-
-        <div class="number">
-          02
-        </div>
-
-        <div>
-
-          <h3>
-            Build the foundation
-          </h3>
-
-          <p>
-            Create the brand identity and positioning.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="journey-item">
-
-        <div class="number">
-          03
-        </div>
-
-        <div>
-
-          <h3>
-            Create the offer
-          </h3>
-
-          <p>
-            Turn the idea into something people can want.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="journey-item">
-
-        <div class="number">
-          04
-        </div>
-
-        <div>
-
-          <h3>
-            Launch
-          </h3>
-
-          <p>
-            Put your brand in front of real people.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="journey-item">
-
-        <div class="number">
-          05
-        </div>
-
-        <div>
-
-          <h3>
-            Learn & grow
-          </h3>
-
-          <p>
-            Improve, market and build momentum.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta-section">
-
-  <div class="container">
-
-    <div class="cta-box">
-
-      <h2>
-        Your first step<br>
-        costs ₹0.
-      </h2>
-
-      <p>
-        Join the Zero to Brand WhatsApp Community and
-        start learning alongside other people building
-        from zero.
-      </p>
+    <div class="hero-actions">
 
       <a
         href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
         target="_blank"
-        rel="noopener"
-        class="whatsapp"
-      >
-        JOIN THE COMMUNITY →
-      </a>
-
-      <div class="free-text">
-        FREE ACCESS • NO PAYMENT REQUIRED
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- FINAL CTA -->
-
-<section class="final">
-
-  <div class="container">
-
-    <h2>
-      Stop waiting.
-      Start building.
-    </h2>
-
-    <p>
-      You don't need everything figured out.
-      You just need to take the first step.
-    </p>
-
-    <a
-      href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-      target="_blank"
-      rel="noopener"
-      class="cta"
-    >
-      JOIN ZERO TO BRAND →
-    </a>
-
-  </div>
-
-</section>
-
-
-<footer>
-  © 2026 Zero to Brand • Built from zero.
-</footer>
-
-</body>
-</html>
+        rel="
