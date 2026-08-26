@@ -868,6 +868,483 @@ footer{
 
 }
 
+
+/* =========================
+   CONVERSION / COMMUNITY UPGRADE
+   ========================= */
+
+:root{
+  --gold:#e2c477;
+  --gold2:#f4d990;
+  --wa:#25d366;
+}
+
+body{
+  background:
+    radial-gradient(circle at 50% -10%, rgba(226,196,119,.11), transparent 34%),
+    #070707;
+}
+
+nav{
+  backdrop-filter:blur(16px);
+  box-shadow:0 8px 35px rgba(0,0,0,.28);
+}
+
+.nav-btn{
+  box-shadow:0 8px 25px rgba(226,196,119,.18);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.nav-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 35px rgba(226,196,119,.28);
+}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  left:50%;
+  top:-260px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(226,196,119,.12),transparent 68%);
+  pointer-events:none;
+}
+
+.hero > .container{
+  position:relative;
+  z-index:1;
+}
+
+.tag{
+  box-shadow:0 0 0 5px rgba(226,196,119,.025), 0 12px 40px rgba(226,196,119,.08);
+}
+
+h1{
+  text-shadow:0 10px 50px rgba(226,196,119,.08);
+}
+
+.hero-text strong{
+  color:#ddd6cb;
+}
+
+.primary,
+.whatsapp,
+.faq-cta a{
+  transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.primary{
+  box-shadow:0 12px 35px rgba(226,196,119,.17);
+}
+
+.primary:hover,
+.whatsapp:hover,
+.faq-cta a:hover{
+  transform:translateY(-3px);
+  filter:brightness(1.04);
+}
+
+.primary:active,
+.whatsapp:active{
+  transform:translateY(0);
+}
+
+.hero-image-link{
+  position:relative;
+  display:block;
+  cursor:pointer;
+  transition:transform .3s ease, box-shadow .3s ease;
+  overflow:hidden;
+}
+
+.hero-image-link:hover{
+  transform:translateY(-5px);
+  box-shadow:0 24px 70px rgba(0,0,0,.45), 0 0 0 1px rgba(226,196,119,.18);
+}
+
+.hero-image-link img{
+  transition:transform .7s cubic-bezier(.2,.7,.2,1), filter .4s ease;
+}
+
+.hero-image-link:hover img{
+  transform:scale(1.025);
+  filter:brightness(.82);
+}
+
+.hero-image-link:after{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border-radius:15px;
+  background:linear-gradient(to top,rgba(0,0,0,.78),rgba(0,0,0,0) 58%);
+  pointer-events:none;
+}
+
+.image-badge{
+  position:absolute;
+  z-index:3;
+  top:18px;
+  left:18px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(7,7,7,.78);
+  border:1px solid rgba(226,196,119,.5);
+  color:var(--gold2);
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1.2px;
+  backdrop-filter:blur(12px);
+}
+
+.image-overlay{
+  position:absolute;
+  z-index:3;
+  left:24px;
+  right:24px;
+  bottom:22px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:3px;
+  text-align:left;
+  pointer-events:none;
+}
+
+.image-overlay span{
+  font-size:23px;
+  margin-bottom:2px;
+}
+
+.image-overlay strong{
+  color:#fff;
+  font-size:15px;
+  letter-spacing:.4px;
+}
+
+.image-overlay small{
+  color:#d0cbc3;
+  font-size:10px;
+}
+
+.community-card.highlight{
+  box-shadow:0 18px 55px rgba(226,196,119,.07);
+}
+
+.cta-box{
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 25px 80px rgba(0,0,0,.35);
+}
+
+.cta-box:before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  left:50%;
+  top:-190px;
+  transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(226,196,119,.13),transparent 70%);
+  pointer-events:none;
+}
+
+.cta-box > *{
+  position:relative;
+  z-index:1;
+}
+
+.whatsapp{
+  background:linear-gradient(135deg,#25d366,#1fbd5a);
+  box-shadow:0 14px 40px rgba(37,211,102,.20);
+}
+
+.community-join-card{
+  max-width:850px;
+  margin:25px auto 0;
+  padding:26px 24px;
+  border:1px solid rgba(37,211,102,.28);
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 15% 0%,rgba(37,211,102,.10),transparent 35%),
+    #0d0f0e;
+  text-align:center;
+}
+
+.community-join-card .join-kicker{
+  color:#71e89a;
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1.6px;
+  margin-bottom:8px;
+}
+
+.community-join-card h3{
+  font-size:clamp(22px,4vw,34px);
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.community-join-card p{
+  color:#77716a;
+  font-size:11px;
+  max-width:520px;
+  margin:0 auto 16px;
+}
+
+.community-join-card a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  padding:0 24px;
+  border-radius:10px;
+  background:#25d366;
+  color:#fff;
+  font-size:11px;
+  font-weight:950;
+  box-shadow:0 12px 35px rgba(37,211,102,.16);
+}
+
+.mobile-cta a{
+  background:#25d366;
+  color:#fff;
+  box-shadow:0 8px 30px rgba(37,211,102,.18);
+}
+
+@media(max-width:700px){
+  .image-badge{
+    top:13px;
+    left:13px;
+    font-size:8px;
+  }
+
+  .image-overlay{
+    left:18px;
+    right:18px;
+    bottom:17px;
+  }
+
+  .image-overlay strong{
+    font-size:13px;
+  }
+
+  .community-join-card{
+    padding:23px 17px;
+  }
+
+  .community-join-card a{
+    width:100%;
+    max-width:360px;
+  }
+}
+
+
+/* =========================
+   MCQ / QUICK CHECK
+   ========================= */
+
+.mcq-section{
+  padding:90px 0;
+  background:
+    radial-gradient(circle at 50% 20%,rgba(226,196,119,.07),transparent 38%),
+    #080808;
+}
+
+.mcq-wrap{
+  max-width:850px;
+  margin:40px auto 0;
+}
+
+.mcq-card{
+  border:1px solid #292929;
+  border-radius:18px;
+  background:#0d0d0d;
+  overflow:hidden;
+  margin-bottom:12px;
+}
+
+.mcq-head{
+  padding:18px 20px;
+  border-bottom:1px solid #222;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+
+.mcq-number{
+  color:#e2c477;
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1.5px;
+}
+
+.mcq-question{
+  padding:21px 20px 14px;
+  color:#eee8df;
+  font-size:14px;
+  font-weight:900;
+}
+
+.mcq-options{
+  padding:0 20px 20px;
+  display:grid;
+  gap:8px;
+}
+
+.mcq-option{
+  appearance:none;
+  width:100%;
+  border:1px solid #292929;
+  border-radius:10px;
+  background:#111;
+  color:#aaa39a;
+  padding:13px 14px;
+  text-align:left;
+  font:inherit;
+  font-size:11px;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.mcq-option:hover{
+  border-color:#514426;
+  color:#eee8df;
+  transform:translateX(2px);
+}
+
+.mcq-option.correct{
+  border-color:#25d366;
+  background:rgba(37,211,102,.09);
+  color:#8df0ae;
+}
+
+.mcq-option.wrong{
+  border-color:#b75b5b;
+  background:rgba(183,91,91,.08);
+  color:#e99a9a;
+}
+
+.mcq-feedback{
+  display:none;
+  padding:0 20px 18px;
+  font-size:10px;
+  color:#77716a;
+}
+
+.mcq-feedback.show{
+  display:block;
+}
+
+.mcq-result{
+  margin-top:20px;
+  padding:22px;
+  border:1px solid #4b3d22;
+  border-radius:16px;
+  background:#12100c;
+  text-align:center;
+}
+
+.mcq-score{
+  color:#e2c477;
+  font-size:28px;
+  font-weight:950;
+}
+
+.mcq-result p{
+  margin:5px auto 15px;
+  color:#77716a;
+  font-size:10px;
+}
+
+.mcq-result a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 22px;
+  border-radius:10px;
+  background:#25d366;
+  color:#fff;
+  font-size:10px;
+  font-weight:950;
+}
+
+.mcq-note{
+  text-align:center;
+  color:#55514b;
+  font-size:9px;
+  margin-top:14px;
+}
+
+@media(max-width:700px){
+  .mcq-section{
+    padding:70px 0;
+  }
+
+  .mcq-question{
+    font-size:13px;
+  }
+
+  .mcq-option{
+    font-size:10px;
+    padding:12px;
+  }
+}
+
+
+.transparency-section{
+  padding:70px 0 20px;
+}
+.transparency-card{
+  max-width:800px;
+  margin:auto;
+  padding:35px 25px;
+  text-align:center;
+  border:1px solid #292929;
+  border-radius:18px;
+  background:#0d0d0d;
+}
+.transparency-card h2{
+  font-size:clamp(28px,6vw,45px);
+  line-height:1;
+  letter-spacing:-2px;
+}
+.transparency-card p{
+  max-width:650px;
+  margin:15px auto 0;
+  color:#77716a;
+  font-size:12px;
+  line-height:1.7;
+}
+.transparency-points{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:20px;
+}
+.transparency-points span{
+  padding:9px 12px;
+  border:1px solid #292929;
+  border-radius:999px;
+  color:#aaa39a;
+  background:#111;
+  font-size:9px;
+  font-weight:800;
+}
+@media(max-width:700px){
+  .transparency-section{padding:55px 0 10px}
+  .transparency-card{padding:28px 18px}
+}
+
 </style>
 </head>
 
@@ -917,7 +1394,7 @@ footer{
     </h1>
 
     <p class="hero-text">
-      Learn the fundamentals behind building a real brand —
+      Learn practical fundamentals for understanding how brands are built. —
       from <strong>product research</strong> and
       <strong>branding</strong> to
       <strong>ads</strong> and
@@ -927,7 +1404,7 @@ footer{
     <div class="price-line">
 
       <span class="old-price">
-        Estimated value ₹20,000
+        FREE LEARNING ACCESS
       </span>
 
       <span>→</span>
@@ -946,7 +1423,7 @@ footer{
         target="_blank"
         rel="noopener"
       >
-        JOIN ZERO TO BRAND FREE →
+        JOIN WHATSAPP COMMUNITY →
       </a>
 
       <a
@@ -963,14 +1440,18 @@ footer{
     </p>
 
 
-    <div class="hero-image">
-
+    <a class="hero-image hero-image-link" href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH" target="_blank" rel="noopener" aria-label="Join the Zero to Brand WhatsApp Community">
+      <div class="image-badge">FREE COMMUNITY ACCESS</div>
       <img
         src="https://cdn.corenexis.com/f/2xRtJcl7gVH.jpeg"
-        alt="Zero to Brand"
+        alt="Join Zero to Brand WhatsApp Community"
       >
-
-    </div>
+      <div class="image-overlay">
+        <span>🐇</span>
+        <strong>JOIN THE COMMUNITY →</strong>
+        <small>Tap the image to get free access</small>
+      </div>
+    </a>
 
   </div>
 
@@ -988,14 +1469,12 @@ footer{
     </div>
 
     <h2 class="section-title">
-      Learn the pieces
+      Understand the pieces
       <span class="gold">behind a brand.</span>
     </h2>
 
     <p class="section-text">
-      Zero to Brand focuses on the important foundations
-      you need to understand before trying to build and
-      market a brand.
+      Zero to Brand is designed to help you understand the key foundations involved in building and marketing a brand.
     </p>
 
 
@@ -1008,15 +1487,15 @@ footer{
         </small>
 
         <div class="big-price">
-          ₹20,000
+          ₹0
         </div>
 
         <p>
-          Estimated value of the individual learning areas below.
+          Explore the learning areas available inside the community.
         </p>
 
         <div class="free-badge">
-          ACCESS FOR ₹0
+          FREE COMMUNITY ACCESS
         </div>
 
       </div>
@@ -1042,9 +1521,7 @@ footer{
 
         </div>
 
-        <div class="value-price">
-          ₹6,000
-        </div>
+        
 
       </div>
 
@@ -1069,9 +1546,7 @@ footer{
 
         </div>
 
-        <div class="value-price">
-          ₹3,000
-        </div>
+        
 
       </div>
 
@@ -1096,9 +1571,7 @@ footer{
 
         </div>
 
-        <div class="value-price">
-          ₹2,000
-        </div>
+        
 
       </div>
 
@@ -1123,9 +1596,7 @@ footer{
 
         </div>
 
-        <div class="value-price">
-          ₹4,000
-        </div>
+        
 
       </div>
 
@@ -1150,9 +1621,7 @@ footer{
 
         </div>
 
-        <div class="value-price">
-          ₹3,000
-        </div>
+        
 
       </div>
 
@@ -1177,9 +1646,7 @@ footer{
 
         </div>
 
-        <div class="value-price">
-          ₹2,000
-        </div>
+        
 
       </div>
 
@@ -1187,13 +1654,13 @@ footer{
       <div class="total">
 
         <div class="total-label">
-          TOTAL ESTIMATED VALUE
+          COMMUNITY ACCESS
         </div>
 
         <div class="total-prices">
 
           <span class="total-old">
-            ₹20,000
+            FREE
           </span>
 
           <span class="total-free">
@@ -1215,7 +1682,7 @@ footer{
         target="_blank"
         rel="noopener"
       >
-        GET FREE ACCESS →
+        JOIN THE COMMUNITY →
       </a>
 
       <p>
