@@ -1,1133 +1,1387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Zero to Brand — Build From Zero</title>
-
-  <meta name="description" content="Learn how to build a brand from zero. Product research, branding, ads, launch strategy and marketing fundamentals. Free access.">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #070707;
-      color: #f5f1e8;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.5;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1050px;
-      margin: auto;
-    }
-
-    .gold {
-      color: #e2c477;
-    }
-
-    /* NAV */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(7,7,7,0.96);
-      border-bottom: 1px solid #222;
-    }
-
-    .nav-inner {
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 14px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-    }
-
-    .logo span {
-      color: #e2c477;
-    }
-
-    .nav-btn {
-      background: #e2c477;
-      color: #111;
-      padding: 9px 15px;
-      border-radius: 8px;
-      font-size: 11px;
-      font-weight: 900;
-    }
-
-    /* HERO */
-
-    .hero {
-      text-align: center;
-      padding: 70px 0 65px;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 8px 13px;
-      border: 1px solid #5b4a28;
-      border-radius: 30px;
-      color: #e2c477;
-      background: #11100d;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: clamp(45px, 9vw, 88px);
-      line-height: 0.94;
-      letter-spacing: -4px;
-      font-weight: 950;
-    }
-
-    .hero-text {
-      max-width: 650px;
-      margin: 25px auto 0;
-      color: #96918a;
-      font-size: 15px;
-    }
-
-    .price-line {
-      margin: 24px auto 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .old-price {
-      color: #65605a;
-      text-decoration: line-through;
-      font-size: 13px;
-    }
-
-    .free-price {
-      color: #e2c477;
-      font-size: 16px;
-      font-weight: 900;
-    }
-
-    .buttons {
-      margin-top: 28px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .primary {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 54px;
-      padding: 0 25px;
-      border-radius: 10px;
-      background: #e2c477;
-      color: #111;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .secondary {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 54px;
-      padding: 0 25px;
-      border-radius: 10px;
-      border: 1px solid #333;
-      color: #ccc5ba;
-      background: #101010;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .small-note {
-      margin-top: 10px;
-      color: #55514b;
-      font-size: 9px;
-    }
-
-    /* IMAGE */
-
-    .hero-image {
-      max-width: 850px;
-      margin: 42px auto 0;
-      padding: 5px;
-      border: 1px solid #4b3d22;
-      border-radius: 20px;
-      background: #101010;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: 420px;
-      display: block;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 80px 0;
-    }
-
-    .label {
-      text-align: center;
-      color: #d5b76b;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      margin-bottom: 14px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: clamp(35px, 7vw, 60px);
-      line-height: 0.97;
-      letter-spacing: -3px;
-      font-weight: 950;
-    }
-
-    .section-text {
-      max-width: 620px;
-      margin: 18px auto 0;
-      text-align: center;
-      color: #77716a;
-      font-size: 13px;
-    }
-
-    /* VALUE CARD */
-
-    .value-card {
-      max-width: 900px;
-      margin: 40px auto 0;
-      border: 1px solid #302a20;
-      border-radius: 20px;
-      overflow: hidden;
-      background: #0d0d0c;
-    }
-
-    .value-header {
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 1px solid #222;
-    }
-
-    .value-header small {
-      color: #77716a;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .big-price {
-      margin-top: 5px;
-      color: #e2c477;
-      font-size: clamp(60px, 13vw, 100px);
-      line-height: 0.9;
-      font-weight: 950;
-      letter-spacing: -5px;
-    }
-
-    .value-header p {
-      margin-top: 12px;
-      color: #5f5a54;
-      font-size: 10px;
-    }
-
-    .free-badge {
-      display: inline-block;
-      margin-top: 17px;
-      padding: 8px 13px;
-      border: 1px solid #4d4024;
-      border-radius: 30px;
-      color: #e2c477;
-      font-size: 10px;
-      font-weight: 900;
-    }
-
-    .value-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      padding: 19px 22px;
-      border-bottom: 1px solid #202020;
-    }
-
-    .value-row:last-child {
-      border-bottom: none;
-    }
-
-    .value-left {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-    }
-
-    .number {
-      width: 37px;
-      height: 37px;
-      min-width: 37px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 9px;
-      border: 1px solid #3d3321;
-      background: #12110e;
-      color: #e2c477;
-      font-size: 9px;
-      font-weight: 900;
-    }
-
-    .value-name {
-      color: #e9e3d9;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .value-desc {
-      margin-top: 2px;
-      color: #615d56;
-      font-size: 9px;
-    }
-
-    .value-price {
-      color: #aaa39a;
-      font-size: 12px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .total {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px;
-      background: #15130f;
-      border-top: 1px solid #493b21;
-    }
-
-    .total-label {
-      font-size: 11px;
-      font-weight: 900;
-    }
-
-    .total-prices {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-
-    .total-old {
-      color: #65605a;
-      font-size: 11px;
-      text-decoration: line-through;
-    }
-
-    .total-free {
-      color: #e2c477;
-      font-size: 20px;
-      font-weight: 950;
-    }
-
-    .value-cta {
-      text-align: center;
-      margin-top: 25px;
-    }
-
-    .value-cta p {
-      margin-top: 8px;
-      color: #55514b;
-      font-size: 9px;
-    }
-
-    /* LEARNING GRID */
-
-    .grid {
-      margin: 40px auto 0;
-      max-width: 950px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-
-    .card {
-      padding: 24px;
-      min-height: 190px;
-      border: 1px solid #242424;
-      border-radius: 15px;
-      background: #0d0d0d;
-    }
-
-    .card-number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 34px;
-      height: 34px;
-      border-radius: 8px;
-      background: #14120e;
-      border: 1px solid #3c321f;
-      color: #e2c477;
-      font-size: 9px;
-      font-weight: 900;
-      margin-bottom: 25px;
-    }
-
-    .card h3 {
-      font-size: 14px;
-      margin-bottom: 7px;
-    }
-
-    .card p {
-      color: #66615a;
-      font-size: 10px;
-    }
-
-    /* ROADMAP */
-
-    .roadmap {
-      max-width: 800px;
-      margin: 40px auto 0;
-    }
-
-    .roadmap-item {
-      display: flex;
-      gap: 17px;
-      padding-bottom: 25px;
-    }
-
-    .road-number {
-      width: 40px;
-      height: 40px;
-      min-width: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      background: #10100e;
-      border: 1px solid #3e3422;
-      color: #e2c477;
-      font-size: 9px;
-      font-weight: 900;
-    }
-
-    .road-content h3 {
-      font-size: 14px;
-      margin-bottom: 4px;
-    }
-
-    .road-content p {
-      color: #66615a;
-      font-size: 11px;
-    }
-
-    /* COMMUNITY */
-
-    .community {
-      max-width: 850px;
-      margin: 40px auto 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .community-card {
-      padding: 27px;
-      border: 1px solid #242424;
-      border-radius: 15px;
-      background: #0d0d0d;
-    }
-
-    .community-card.highlight {
-      border-color: #4b3d22;
-      background: #12100c;
-    }
-
-    .community-card h3 {
-      font-size: 15px;
-      margin-bottom: 8px;
-    }
-
-    .community-card p {
-      color: #66615a;
-      font-size: 11px;
-    }
-
-    /* BIG CTA */
-
-    .cta-box {
-      max-width: 950px;
-      margin: auto;
-      padding: 65px 25px;
-      text-align: center;
-      border: 1px solid #4b3d22;
-      border-radius: 23px;
-      background: #0e0d0b;
-    }
-
-    .cta-box .mini {
-      display: inline-block;
-      padding: 7px 11px;
-      border-radius: 7px;
-      background: #15130f;
-      border: 1px solid #3d321f;
-      color: #e2c477;
-      font-size: 9px;
-      font-weight: 900;
-      margin-bottom: 17px;
-    }
-
-    .cta-box h2 {
-      max-width: 750px;
-      margin: auto;
-      font-size: clamp(39px, 8vw, 70px);
-      line-height: 0.93;
-      letter-spacing: -3px;
-      font-weight: 950;
-    }
-
-    .cta-box p {
-      max-width: 570px;
-      margin: 18px auto 27px;
-      color: #77716a;
-      font-size: 13px;
-    }
-
-    .whatsapp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 55px;
-      padding: 0 27px;
-      border-radius: 10px;
-      background: #25d366;
-      color: white;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .cta-note {
-      margin-top: 10px;
-      color: #514d47;
-      font-size: 9px;
-    }
-
-    /* FAQ */
-
-    .faq {
-      max-width: 800px;
-      margin: 40px auto 0;
-    }
-
-    details {
-      border-top: 1px solid #242424;
-    }
-
-    details:last-child {
-      border-bottom: 1px solid #242424;
-    }
-
-    summary {
-      cursor: pointer;
-      list-style: none;
-      padding: 20px 3px;
-      color: #ddd7ce;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::after {
-      content: "+";
-      float: right;
-      color: #e2c477;
-      font-size: 17px;
-    }
-
-    details[open] summary::after {
-      content: "−";
-    }
-
-    details p {
-      padding: 0 25px 20px 3px;
-      color: #66615a;
-      font-size: 10px;
-    }
-
-    /* FINAL */
-
-    .final {
-      text-align: center;
-      padding: 80px 0 110px;
-    }
-
-    .final h2 {
-      max-width: 780px;
-      margin: auto;
-      font-size: clamp(40px, 8vw, 70px);
-      line-height: 0.94;
-      letter-spacing: -3px;
-      font-weight: 950;
-    }
-
-    .final p {
-      max-width: 530px;
-      margin: 17px auto 27px;
-      color: #69645d;
-      font-size: 12px;
-    }
-
-    footer {
-      border-top: 1px solid #202020;
-      padding: 25px 0 90px;
-      text-align: center;
-      color: #46423d;
-      font-size: 9px;
-    }
-
-    /* MOBILE */
-
-    .mobile-cta {
-      display: none;
-    }
-
-    @media (max-width: 700px) {
-
-      .hero {
-        padding-top: 55px;
-      }
-
-      h1 {
-        letter-spacing: -3px;
-      }
-
-      .hero-text {
-        font-size: 13px;
-      }
-
-      .buttons {
-        flex-direction: column;
-      }
-
-      .primary,
-      .secondary {
-        width: 100%;
-        max-width: 360px;
-      }
-
-      .hero-image img {
-        height: 270px;
-      }
-
-      section {
-        padding: 65px 0;
-      }
-
-      .section-title {
-        letter-spacing: -2px;
-      }
-
-      .value-row {
-        padding: 17px 15px;
-      }
-
-      .value-left {
-        gap: 9px;
-      }
-
-      .number {
-        width: 34px;
-        height: 34px;
-        min-width: 34px;
-      }
-
-      .value-name {
-        font-size: 11px;
-      }
-
-      .value-desc {
-        max-width: 190px;
-        font-size: 8px;
-      }
-
-      .value-price {
-        font-size: 10px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .community {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-box {
-        padding: 55px 18px;
-      }
-
-      .cta-box h2 {
-        letter-spacing: -2.5px;
-      }
-
-      .whatsapp {
-        width: 100%;
-        max-width: 360px;
-      }
-
-      .mobile-cta {
-        display: block;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 9999;
-        padding: 9px;
-        background: rgba(7,7,7,0.97);
-        border-top: 1px solid #332a1b;
-      }
-
-      .mobile-cta a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 48px;
-        border-radius: 9px;
-        background: #e2c477;
-        color: #111;
-        font-size: 10px;
-        font-weight: 950;
-      }
-
-      footer {
-        padding-bottom: 75px;
-      }
-    }
-
-    @media (max-width: 390px) {
-
-      h1 {
-        font-size: 43px;
-      }
-
-      .hero-image img {
-        height: 225px;
-      }
-
-      .value-desc {
-        max-width: 145px;
-      }
-
-      .value-price {
-        font-size: 9px;
-      }
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zero to Brand — Build From Zero</title>
+
+<meta name="description" content="Learn the fundamentals of building a brand from zero. Product research, branding, ads, marketing and launch strategy. Free access.">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#070707;
+  color:#f5f1e8;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.5;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:92%;
+  max-width:1050px;
+  margin:auto;
+}
+
+.gold{
+  color:#e2c477;
+}
+
+
+/* NAV */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,7,7,.97);
+  border-bottom:1px solid #242424;
+}
+
+.nav-inner{
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:1.5px;
+}
+
+.logo span{
+  color:#e2c477;
+}
+
+.nav-btn{
+  background:#e2c477;
+  color:#111;
+  padding:9px 15px;
+  border-radius:8px;
+  font-size:11px;
+  font-weight:900;
+}
+
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:75px 0 65px;
+}
+
+.tag{
+  display:inline-block;
+  padding:8px 14px;
+  border:1px solid #5b4a28;
+  border-radius:30px;
+  color:#e2c477;
+  background:#11100d;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:25px;
+}
+
+h1{
+  font-size:clamp(45px,9vw,88px);
+  line-height:.94;
+  letter-spacing:-4px;
+  font-weight:950;
+}
+
+.hero-text{
+  max-width:650px;
+  margin:25px auto 0;
+  color:#96918a;
+  font-size:15px;
+}
+
+.price-line{
+  margin:24px auto 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.old-price{
+  color:#65605a;
+  text-decoration:line-through;
+  font-size:13px;
+}
+
+.free-price{
+  color:#e2c477;
+  font-size:16px;
+  font-weight:900;
+}
+
+.buttons{
+  margin-top:28px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.primary{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-height:54px;
+  padding:0 25px;
+  border-radius:10px;
+  background:#e2c477;
+  color:#111;
+  font-size:12px;
+  font-weight:900;
+}
+
+.secondary{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-height:54px;
+  padding:0 25px;
+  border-radius:10px;
+  border:1px solid #333;
+  color:#ccc5ba;
+  background:#101010;
+  font-size:12px;
+  font-weight:800;
+}
+
+.small-note{
+  margin-top:10px;
+  color:#55514b;
+  font-size:9px;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image{
+  max-width:850px;
+  margin:42px auto 0;
+  padding:5px;
+  border:1px solid #4b3d22;
+  border-radius:20px;
+  background:#101010;
+}
+
+.hero-image img{
+  width:100%;
+  height:420px;
+  display:block;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+
+/* GENERAL SECTIONS */
+
+section{
+  padding:80px 0;
+}
+
+.label{
+  text-align:center;
+  color:#d5b76b;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:14px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:clamp(35px,7vw,60px);
+  line-height:.97;
+  letter-spacing:-3px;
+  font-weight:950;
+}
+
+.section-text{
+  max-width:620px;
+  margin:18px auto 0;
+  text-align:center;
+  color:#77716a;
+  font-size:13px;
+}
+
+
+/* VALUE */
+
+.value-card{
+  max-width:900px;
+  margin:40px auto 0;
+  border:1px solid #302a20;
+  border-radius:20px;
+  overflow:hidden;
+  background:#0d0d0c;
+}
+
+.value-header{
+  padding:40px 20px;
+  text-align:center;
+  border-bottom:1px solid #222;
+}
+
+.value-header small{
+  color:#77716a;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.big-price{
+  margin-top:5px;
+  color:#e2c477;
+  font-size:clamp(60px,13vw,100px);
+  line-height:.9;
+  font-weight:950;
+  letter-spacing:-5px;
+}
+
+.value-header p{
+  margin-top:12px;
+  color:#5f5a54;
+  font-size:10px;
+}
+
+.free-badge{
+  display:inline-block;
+  margin-top:17px;
+  padding:8px 13px;
+  border:1px solid #4d4024;
+  border-radius:30px;
+  color:#e2c477;
+  font-size:10px;
+  font-weight:900;
+}
+
+.value-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  padding:19px 22px;
+  border-bottom:1px solid #202020;
+}
+
+.value-left{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+
+.number{
+  width:37px;
+  height:37px;
+  min-width:37px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:9px;
+  border:1px solid #3d3321;
+  background:#12110e;
+  color:#e2c477;
+  font-size:9px;
+  font-weight:900;
+}
+
+.value-name{
+  color:#e9e3d9;
+  font-size:12px;
+  font-weight:900;
+}
+
+.value-desc{
+  margin-top:2px;
+  color:#615d56;
+  font-size:9px;
+}
+
+.value-price{
+  color:#aaa39a;
+  font-size:12px;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.total{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px;
+  background:#15130f;
+  border-top:1px solid #493b21;
+}
+
+.total-label{
+  font-size:11px;
+  font-weight:900;
+}
+
+.total-prices{
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+
+.total-old{
+  color:#65605a;
+  font-size:11px;
+  text-decoration:line-through;
+}
+
+.total-free{
+  color:#e2c477;
+  font-size:20px;
+  font-weight:950;
+}
+
+.value-cta{
+  text-align:center;
+  margin-top:25px;
+}
+
+.value-cta p{
+  margin-top:8px;
+  color:#55514b;
+  font-size:9px;
+}
+
+
+/* LEARNING GRID */
+
+.grid{
+  margin:40px auto 0;
+  max-width:950px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.card{
+  padding:24px;
+  min-height:190px;
+  border:1px solid #242424;
+  border-radius:15px;
+  background:#0d0d0d;
+}
+
+.card-number{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border-radius:8px;
+  background:#14120e;
+  border:1px solid #3c321f;
+  color:#e2c477;
+  font-size:9px;
+  font-weight:900;
+  margin-bottom:25px;
+}
+
+.card h3{
+  font-size:14px;
+  margin-bottom:7px;
+}
+
+.card p{
+  color:#66615a;
+  font-size:10px;
+}
+
+
+/* ROADMAP */
+
+.roadmap{
+  max-width:800px;
+  margin:40px auto 0;
+}
+
+.roadmap-item{
+  display:flex;
+  gap:17px;
+  padding-bottom:25px;
+}
+
+.road-number{
+  width:40px;
+  height:40px;
+  min-width:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  background:#10100e;
+  border:1px solid #3e3422;
+  color:#e2c477;
+  font-size:9px;
+  font-weight:900;
+}
+
+.road-content h3{
+  font-size:14px;
+  margin-bottom:4px;
+}
+
+.road-content p{
+  color:#66615a;
+  font-size:11px;
+}
+
+
+/* COMMUNITY */
+
+.community{
+  max-width:850px;
+  margin:40px auto 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.community-card{
+  padding:27px;
+  border:1px solid #242424;
+  border-radius:15px;
+  background:#0d0d0d;
+}
+
+.community-card.highlight{
+  border-color:#4b3d22;
+  background:#12100c;
+}
+
+.community-card h3{
+  font-size:15px;
+  margin-bottom:8px;
+}
+
+.community-card p{
+  color:#66615a;
+  font-size:11px;
+}
+
+
+/* BIG CTA */
+
+.cta-box{
+  max-width:950px;
+  margin:auto;
+  padding:65px 25px;
+  text-align:center;
+  border:1px solid #4b3d22;
+  border-radius:23px;
+  background:#0e0d0b;
+}
+
+.cta-box .mini{
+  display:inline-block;
+  padding:7px 11px;
+  border-radius:7px;
+  background:#15130f;
+  border:1px solid #3d321f;
+  color:#e2c477;
+  font-size:9px;
+  font-weight:900;
+  margin-bottom:17px;
+}
+
+.cta-box h2{
+  max-width:750px;
+  margin:auto;
+  font-size:clamp(39px,8vw,70px);
+  line-height:.93;
+  letter-spacing:-3px;
+  font-weight:950;
+}
+
+.cta-box p{
+  max-width:570px;
+  margin:18px auto 27px;
+  color:#77716a;
+  font-size:13px;
+}
+
+.whatsapp{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:55px;
+  padding:0 27px;
+  border-radius:10px;
+  background:#25d366;
+  color:white;
+  font-size:12px;
+  font-weight:900;
+}
+
+.cta-note{
+  margin-top:10px;
+  color:#514d47;
+  font-size:9px;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-section{
+  padding:90px 0;
+  background:#080808;
+}
+
+.faq-label{
+  text-align:center;
+  color:#e2c477;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.faq-title{
+  text-align:center;
+  font-size:clamp(40px,8vw,65px);
+  line-height:.95;
+  letter-spacing:-3px;
+  font-weight:950;
+}
+
+.faq-title span{
+  color:#e2c477;
+}
+
+.faq-subtitle{
+  max-width:600px;
+  margin:18px auto 40px;
+  text-align:center;
+  color:#77716a;
+  font-size:13px;
+}
+
+.faq-list{
+  max-width:800px;
+  margin:auto;
+}
+
+.faq-item{
+  border-top:1px solid #292929;
+}
+
+.faq-item:last-child{
+  border-bottom:1px solid #292929;
+}
+
+.faq-question{
+  width:100%;
+  border:none;
+  outline:none;
+  background:transparent;
+  color:#eee8df;
+  padding:23px 5px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  text-align:left;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:900;
+}
+
+.faq-question b{
+  color:#e2c477;
+  font-size:20px;
+  font-weight:400;
+  transition:.2s;
+}
+
+.faq-answer{
+  display:none;
+  padding:0 35px 22px 5px;
+  color:#77716a;
+  font-size:11px;
+  line-height:1.7;
+}
+
+.faq-item.active .faq-answer{
+  display:block;
+}
+
+.faq-item.active .faq-question b{
+  transform:rotate(45deg);
+}
+
+.faq-cta{
+  text-align:center;
+  margin-top:40px;
+}
+
+.faq-cta p{
+  color:#66615a;
+  font-size:10px;
+  margin-bottom:12px;
+}
+
+.faq-cta a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 25px;
+  border-radius:10px;
+  background:#e2c477;
+  color:#111;
+  font-size:11px;
+  font-weight:950;
+}
+
+
+/* FINAL */
+
+.final{
+  text-align:center;
+  padding:80px 0 110px;
+}
+
+.final h2{
+  max-width:780px;
+  margin:auto;
+  font-size:clamp(40px,8vw,70px);
+  line-height:.94;
+  letter-spacing:-3px;
+  font-weight:950;
+}
+
+.final p{
+  max-width:530px;
+  margin:17px auto 27px;
+  color:#69645d;
+  font-size:12px;
+}
+
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid #202020;
+  padding:25px 0 90px;
+  text-align:center;
+  color:#46423d;
+  font-size:9px;
+}
+
+
+/* MOBILE CTA */
+
+.mobile-cta{
+  display:none;
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .hero{
+    padding-top:55px;
+  }
+
+  h1{
+    letter-spacing:-3px;
+  }
+
+  .hero-text{
+    font-size:13px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .primary,
+  .secondary{
+    width:100%;
+    max-width:360px;
+  }
+
+  .hero-image img{
+    height:270px;
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .section-title{
+    letter-spacing:-2px;
+  }
+
+  .value-row{
+    padding:17px 15px;
+  }
+
+  .value-left{
+    gap:9px;
+  }
+
+  .number{
+    width:34px;
+    height:34px;
+    min-width:34px;
+  }
+
+  .value-name{
+    font-size:11px;
+  }
+
+  .value-desc{
+    max-width:190px;
+    font-size:8px;
+  }
+
+  .value-price{
+    font-size:10px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .community{
+    grid-template-columns:1fr;
+  }
+
+  .cta-box{
+    padding:55px 18px;
+  }
+
+  .cta-box h2{
+    letter-spacing:-2.5px;
+  }
+
+  .whatsapp{
+    width:100%;
+    max-width:360px;
+  }
+
+  .faq-section{
+    padding:70px 0;
+  }
+
+  .faq-title{
+    letter-spacing:-2px;
+  }
+
+  .faq-question{
+    padding:20px 3px;
+    font-size:12px;
+  }
+
+  .faq-answer{
+    padding-right:20px;
+    font-size:10px;
+  }
+
+  .faq-cta a{
+    width:100%;
+    max-width:360px;
+  }
+
+  .mobile-cta{
+    display:block;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:9999;
+    padding:9px;
+    background:rgba(7,7,7,.97);
+    border-top:1px solid #332a1b;
+  }
+
+  .mobile-cta a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:48px;
+    border-radius:9px;
+    background:#e2c477;
+    color:#111;
+    font-size:10px;
+    font-weight:950;
+  }
+
+  footer{
+    padding-bottom:75px;
+  }
+
+}
+
+
+/* SMALL PHONES */
+
+@media(max-width:390px){
+
+  h1{
+    font-size:43px;
+  }
+
+  .hero-image img{
+    height:225px;
+  }
+
+  .value-desc{
+    max-width:145px;
+  }
+
+  .value-price{
+    font-size:9px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <!-- NAV -->
 
-  <nav>
-    <div class="container nav-inner">
+<!-- NAVIGATION -->
 
-      <div class="logo">
-        ZERO <span>TO</span> BRAND
-      </div>
+<nav>
+
+  <div class="container nav-inner">
+
+    <div class="logo">
+      ZERO <span>TO</span> BRAND
+    </div>
+
+    <a
+      class="nav-btn"
+      href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
+      target="_blank"
+      rel="noopener"
+    >
+      JOIN FREE →
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="tag">
+      LEARN TO BUILD A BRAND FROM ZERO
+    </div>
+
+    <h1>
+      Build Your Brand.
+      <br>
+      Start From
+      <span class="gold">Zero.</span>
+    </h1>
+
+    <p class="hero-text">
+      Learn the fundamentals behind building a real brand —
+      from <strong>product research</strong> and
+      <strong>branding</strong> to
+      <strong>ads</strong> and
+      <strong>launch strategy.</strong>
+    </p>
+
+    <div class="price-line">
+
+      <span class="old-price">
+        Estimated value ₹20,000
+      </span>
+
+      <span>→</span>
+
+      <span class="free-price">
+        JOIN FOR ₹0
+      </span>
+
+    </div>
+
+    <div class="buttons">
 
       <a
-        class="nav-btn"
+        class="primary"
         href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
         target="_blank"
         rel="noopener"
       >
-        JOIN FREE →
+        JOIN ZERO TO BRAND FREE →
+      </a>
+
+      <a
+        class="secondary"
+        href="#value"
+      >
+        SEE WHAT'S INCLUDED ↓
       </a>
 
     </div>
-  </nav>
+
+    <p class="small-note">
+      No payment required • Start with the fundamentals
+    </p>
 
 
-  <!-- HERO -->
+    <div class="hero-image">
 
-  <section class="hero">
+      <img
+        src="https://cdn.corenexis.com/f/2xRtJcl7gVH.jpeg"
+        alt="Zero to Brand"
+      >
 
-    <div class="container">
+    </div>
 
-      <div class="tag">
-        LEARN TO BUILD A BRAND FROM ZERO
+  </div>
+
+</section>
+
+
+<!-- VALUE SECTION -->
+
+<section id="value">
+
+  <div class="container">
+
+    <div class="label">
+      WHAT'S INCLUDED
+    </div>
+
+    <h2 class="section-title">
+      Learn the pieces
+      <span class="gold">behind a brand.</span>
+    </h2>
+
+    <p class="section-text">
+      Zero to Brand focuses on the important foundations
+      you need to understand before trying to build and
+      market a brand.
+    </p>
+
+
+    <div class="value-card">
+
+      <div class="value-header">
+
+        <small>
+          ESTIMATED LEARNING VALUE
+        </small>
+
+        <div class="big-price">
+          ₹20,000
+        </div>
+
+        <p>
+          Estimated value of the individual learning areas below.
+        </p>
+
+        <div class="free-badge">
+          ACCESS FOR ₹0
+        </div>
+
       </div>
 
-      <h1>
-        Build Your Brand.
-        <br>
-        Start From
-        <span class="gold">Zero.</span>
-      </h1>
 
-      <p class="hero-text">
-        Learn the fundamentals behind building a real brand —
-        from <strong>product research</strong> and
-        <strong>branding</strong> to
-        <strong>ads</strong> and
-        <strong>launch strategy.</strong>
-      </p>
+      <div class="value-row">
 
-      <div class="price-line">
-        <span class="old-price">
-          Estimated value ₹20,000
-        </span>
+        <div class="value-left">
 
-        <span>
-          →
-        </span>
+          <div class="number">01</div>
 
-        <span class="free-price">
-          JOIN FOR ₹0
-        </span>
-      </div>
+          <div>
 
-      <div class="buttons">
+            <div class="value-name">
+              Product Research
+            </div>
 
-        <a
-          class="primary"
-          href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-          target="_blank"
-          rel="noopener"
-        >
-          JOIN ZERO TO BRAND FREE →
-        </a>
+            <div class="value-desc">
+              Products, customers, competitors & opportunities
+            </div>
 
-        <a
-          class="secondary"
-          href="#value"
-        >
-          SEE WHAT'S INCLUDED ↓
-        </a>
+          </div>
+
+        </div>
+
+        <div class="value-price">
+          ₹6,000
+        </div>
 
       </div>
 
-      <p class="small-note">
-        No payment required • Start with the fundamentals
-      </p>
+
+      <div class="value-row">
+
+        <div class="value-left">
+
+          <div class="number">02</div>
+
+          <div>
+
+            <div class="value-name">
+              Brand Strategy
+            </div>
+
+            <div class="value-desc">
+              Positioning, offers & differentiation
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="value-price">
+          ₹3,000
+        </div>
+
+      </div>
 
 
-      <!-- YOUR IMAGE -->
+      <div class="value-row">
 
-      <div class="hero-image">
+        <div class="value-left">
 
-        <img
-          src="https://cdn.corenexis.com/f/2xRtJcl7gVH.jpeg"
-          alt="Zero to Brand"
-        >
+          <div class="number">03</div>
+
+          <div>
+
+            <div class="value-name">
+              Brand Identity
+            </div>
+
+            <div class="value-desc">
+              Naming, visuals, messaging & consistency
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="value-price">
+          ₹2,000
+        </div>
+
+      </div>
+
+
+      <div class="value-row">
+
+        <div class="value-left">
+
+          <div class="number">04</div>
+
+          <div>
+
+            <div class="value-name">
+              Ads Creation
+            </div>
+
+            <div class="value-desc">
+              Hooks, creatives, structure & attention
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="value-price">
+          ₹4,000
+        </div>
+
+      </div>
+
+
+      <div class="value-row">
+
+        <div class="value-left">
+
+          <div class="number">05</div>
+
+          <div>
+
+            <div class="value-name">
+              Launch Strategy
+            </div>
+
+            <div class="value-desc">
+              Preparation, anticipation & launch
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="value-price">
+          ₹3,000
+        </div>
+
+      </div>
+
+
+      <div class="value-row">
+
+        <div class="value-left">
+
+          <div class="number">06</div>
+
+          <div>
+
+            <div class="value-name">
+              Marketing Fundamentals
+            </div>
+
+            <div class="value-desc">
+              Audience, content, distribution & growth basics
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="value-price">
+          ₹2,000
+        </div>
+
+      </div>
+
+
+      <div class="total">
+
+        <div class="total-label">
+          TOTAL ESTIMATED VALUE
+        </div>
+
+        <div class="total-prices">
+
+          <span class="total-old">
+            ₹20,000
+          </span>
+
+          <span class="total-free">
+            ₹0
+          </span>
+
+        </div>
 
       </div>
 
     </div>
 
-  </section>
 
+    <div class="value-cta">
 
-  <!-- VALUE -->
+      <a
+        class="primary"
+        href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
+        target="_blank"
+        rel="noopener"
+      >
+        GET FREE ACCESS →
+      </a>
 
-  <section id="value">
-
-    <div class="container">
-
-      <div class="label">
-        WHAT'S INCLUDED
-      </div>
-
-      <h2 class="section-title">
-        Learn the pieces
-        <span class="gold">behind a brand.</span>
-      </h2>
-
-      <p class="section-text">
-        Zero to Brand focuses on the important foundations
-        you need to understand before trying to build and
-        market a brand.
+      <p>
+        Join the Zero to Brand WhatsApp Community.
       </p>
 
+    </div>
 
-      <div class="value-card">
+  </div>
 
-        <div class="value-header">
+</section>
 
-          <small>
-            Estimated learning value
-          </small>
 
-          <div class="big-price">
-            ₹20,000
-          </div>
+<!-- LEARNING -->
 
-          <p>
-            Estimated value of the individual learning areas below.
-          </p>
+<section>
 
-          <div class="free-badge">
-            ACCESS FOR ₹0
-          </div>
+  <div class="container">
 
-        </div>
+    <div class="label">
+      WHAT YOU'LL LEARN
+    </div>
 
+    <h2 class="section-title">
+      From idea
+      <span class="gold">to brand.</span>
+    </h2>
 
-        <!-- 1 -->
+    <p class="section-text">
+      Understand the major decisions involved in
+      creating, positioning and marketing a brand.
+    </p>
 
-        <div class="value-row">
 
-          <div class="value-left">
+    <div class="grid">
 
-            <div class="number">01</div>
 
-            <div>
-              <div class="value-name">
-                Product Research
-              </div>
+      <div class="card">
 
-              <div class="value-desc">
-                Products, customers, competitors & opportunities
-              </div>
-            </div>
+        <div class="card-number">01</div>
 
-          </div>
-
-          <div class="value-price">
-            ₹6,000
-          </div>
-
-        </div>
-
-
-        <!-- 2 -->
-
-        <div class="value-row">
-
-          <div class="value-left">
-
-            <div class="number">02</div>
-
-            <div>
-              <div class="value-name">
-                Brand Strategy
-              </div>
-
-              <div class="value-desc">
-                Positioning, offers & differentiation
-              </div>
-            </div>
-
-          </div>
-
-          <div class="value-price">
-            ₹3,000
-          </div>
-
-        </div>
-
-
-        <!-- 3 -->
-
-        <div class="value-row">
-
-          <div class="value-left">
-
-            <div class="number">03</div>
-
-            <div>
-              <div class="value-name">
-                Brand Identity
-              </div>
-
-              <div class="value-desc">
-                Naming, visuals, messaging & consistency
-              </div>
-            </div>
-
-          </div>
-
-          <div class="value-price">
-            ₹2,000
-          </div>
-
-        </div>
-
-
-        <!-- 4 -->
-
-        <div class="value-row">
-
-          <div class="value-left">
-
-            <div class="number">04</div>
-
-            <div>
-              <div class="value-name">
-                Ads Creation
-              </div>
-
-              <div class="value-desc">
-                Hooks, creatives, structure & attention
-              </div>
-            </div>
-
-          </div>
-
-          <div class="value-price">
-            ₹4,000
-          </div>
-
-        </div>
-
-
-        <!-- 5 -->
-
-        <div class="value-row">
-
-          <div class="value-left">
-
-            <div class="number">05</div>
-
-            <div>
-              <div class="value-name">
-                Launch Strategy
-              </div>
-
-              <div class="value-desc">
-                Preparation, anticipation & launch
-              </div>
-            </div>
-
-          </div>
-
-          <div class="value-price">
-            ₹3,000
-          </div>
-
-        </div>
-
-
-        <!-- 6 -->
-
-        <div class="value-row">
-
-          <div class="value-left">
-
-            <div class="number">06</div>
-
-            <div>
-              <div class="value-name">
-                Marketing Fundamentals
-              </div>
-
-              <div class="value-desc">
-                Audience, content, distribution & growth basics
-              </div>
-            </div>
-
-          </div>
-
-          <div class="value-price">
-            ₹2,000
-          </div>
-
-        </div>
-
-
-        <div class="total">
-
-          <div class="total-label">
-            TOTAL ESTIMATED VALUE
-          </div>
-
-          <div class="total-prices">
-
-            <span class="total-old">
-              ₹20,000
-            </span>
-
-            <span class="total-free">
-              ₹0
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="value-cta">
-
-        <a
-          class="primary"
-          href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-          target="_blank"
-          rel="noopener"
-        >
-          GET FREE ACCESS →
-        </a>
+        <h3>
+          Product Research
+        </h3>
 
         <p>
-          Join the Zero to Brand WhatsApp Community.
+          Learn how to research products, customers,
+          competitors and opportunities before making
+          important decisions.
         </p>
 
       </div>
 
-    </div>
 
-  </section>
+      <div class="card">
 
+        <div class="card-number">02</div>
 
-  <!-- WHAT YOU LEARN -->
+        <h3>
+          Brand Strategy
+        </h3>
 
-  <section>
+        <p>
+          Understand positioning, differentiation,
+          offers and the foundations that give a
+          brand direction.
+        </p>
 
-    <div class="container">
-
-      <div class="label">
-        WHAT YOU'LL LEARN
       </div>
 
-      <h2 class="section-title">
-        From idea
-        <span class="gold">to brand.</span>
-      </h2>
 
-      <p class="section-text">
+      <div class="card">
+
+        <div class="card-number">03</div>
+
+        <h3>
+          Brand Identity
+        </h3>
+
+        <p>
+          Learn how naming, visuals, messaging and
+          consistency shape how people perceive
+          a brand.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-number">04</div>
+
+        <h3>
+          Ads Creation
+        </h3>
+
+        <p>
+          Learn the basics of hooks, creative concepts
+          and ad structures designed to capture attention.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-number">05</div>
+
+        <h3>
+          Launch Strategy
+        </h3>
+
+        <p>
+          Understand how to prepare your offer,
+          build anticipation and introduce it
+          to an audience.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-number">06</div>
+
+        <h3>
+          Marketing
+        </h3>
+
+        <p>
+          Understand audiences, content, distribution
+          and the fundamentals of building attention.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ROADMAP -->
+
+<section>
+
+  <div class="container">
+
+    <div class="label">
+      THE JOURNEY
+    </div>
+
+    <h2 class="section-title">
+      Zero
+      <span class="gold">to Brand.</span>
+    </h2>
+
+    <p class="section-text">
+      A simple framework for understanding the journey
+      behind building a brand.
+    </p>
+
+
+    <div class="roadmap">
+
+
+      <div class="roadmap-item">
