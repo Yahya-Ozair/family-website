@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Zero to Brand — Build From Zero</title>
+<title>Learn Dropshipping From Zero — Free Live Webinar</title>
 
-<meta name="description" content="Learn the fundamentals of building a brand from zero. Product research, branding, ads, marketing and launch strategy. Free access.">
+<meta name="description" content="Join our free live dropshipping webinar on Sunday, 30 August 2026. Learn product research, suppliers, store setup, marketing and the fundamentals of starting dropshipping.">
 
 <style>
-
 *{
   margin:0;
   padding:0;
@@ -33,6 +32,10 @@ a{
   color:inherit;
 }
 
+button{
+  font-family:inherit;
+}
+
 .container{
   width:92%;
   max-width:1050px;
@@ -43,15 +46,17 @@ a{
   color:#e2c477;
 }
 
-
-/* NAV */
+/* =========================
+   NAV
+========================= */
 
 nav{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(7,7,7,.97);
+  background:rgba(7,7,7,.96);
   border-bottom:1px solid #242424;
+  backdrop-filter:blur(16px);
 }
 
 .nav-inner{
@@ -63,7 +68,7 @@ nav{
 
 .logo{
   font-size:14px;
-  font-weight:900;
+  font-weight:950;
   letter-spacing:1.5px;
 }
 
@@ -74,119 +79,216 @@ nav{
 .nav-btn{
   background:#e2c477;
   color:#111;
-  padding:9px 15px;
+  padding:10px 16px;
   border-radius:8px;
-  font-size:11px;
-  font-weight:900;
+  font-size:10px;
+  font-weight:950;
+  box-shadow:0 8px 25px rgba(226,196,119,.16);
 }
 
-
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
+  position:relative;
+  overflow:hidden;
   text-align:center;
-  padding:75px 0 65px;
+  padding:65px 0 60px;
 }
 
-.tag{
-  display:inline-block;
-  padding:8px 14px;
-  border:1px solid #5b4a28;
-  border-radius:30px;
-  color:#e2c477;
+.hero:before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  left:50%;
+  top:-350px;
+  transform:translateX(-50%);
+  background:radial-gradient(
+    circle,
+    rgba(226,196,119,.14),
+    transparent 68%
+  );
+  pointer-events:none;
+}
+
+.hero > .container{
+  position:relative;
+  z-index:1;
+}
+
+.webinar-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 15px;
+  border:1px solid #594b2c;
+  border-radius:999px;
   background:#11100d;
+  color:#e2c477;
   font-size:10px;
-  font-weight:800;
-  letter-spacing:1px;
-  margin-bottom:25px;
+  font-weight:950;
+  letter-spacing:1.2px;
+  margin-bottom:22px;
+  box-shadow:0 0 35px rgba(226,196,119,.08);
+}
+
+.live-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#e2c477;
+  box-shadow:0 0 12px #e2c477;
 }
 
 h1{
-  font-size:clamp(45px,9vw,88px);
-  line-height:.94;
+  font-size:clamp(43px,9vw,88px);
+  line-height:.92;
   letter-spacing:-4px;
   font-weight:950;
+  text-shadow:0 15px 55px rgba(226,196,119,.08);
 }
 
 .hero-text{
-  max-width:650px;
-  margin:25px auto 0;
-  color:#96918a;
+  max-width:680px;
+  margin:23px auto 0;
+  color:#8b867f;
   font-size:15px;
 }
 
-.price-line{
+.hero-text strong{
+  color:#ddd6cb;
+}
+
+.date-line{
   margin:24px auto 0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:12px;
+  display:inline-flex;
   flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
 }
 
-.old-price{
-  color:#65605a;
-  text-decoration:line-through;
-  font-size:13px;
-}
-
-.free-price{
-  color:#e2c477;
-  font-size:16px;
+.date-pill{
+  padding:9px 13px;
+  border-radius:8px;
+  background:#111;
+  border:1px solid #302a20;
+  color:#ccc5ba;
+  font-size:10px;
   font-weight:900;
+}
+
+.date-pill strong{
+  color:#e2c477;
 }
 
 .buttons{
-  margin-top:28px;
+  margin-top:27px;
   display:flex;
   justify-content:center;
   gap:12px;
   flex-wrap:wrap;
 }
 
-.primary{
+.primary,
+.secondary{
   display:inline-flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   min-height:54px;
   padding:0 25px;
   border-radius:10px;
+  font-size:11px;
+  font-weight:950;
+  transition:.2s ease;
+}
+
+.primary{
   background:#e2c477;
   color:#111;
-  font-size:12px;
-  font-weight:900;
+  box-shadow:0 14px 40px rgba(226,196,119,.18);
 }
 
 .secondary{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  min-height:54px;
-  padding:0 25px;
-  border-radius:10px;
+  background:#101010;
   border:1px solid #333;
   color:#ccc5ba;
-  background:#101010;
-  font-size:12px;
-  font-weight:800;
+}
+
+.primary:hover,
+.secondary:hover{
+  transform:translateY(-3px);
 }
 
 .small-note{
   margin-top:10px;
-  color:#55514b;
+  color:#57534d;
   font-size:9px;
 }
 
+/* =========================
+   COUNTDOWN
+========================= */
 
-/* HERO IMAGE */
+.countdown-wrap{
+  max-width:850px;
+  margin:38px auto 0;
+}
+
+.countdown-title{
+  color:#77716a;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:9px;
+  font-weight:950;
+  margin-bottom:13px;
+}
+
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.time-box{
+  padding:20px 10px;
+  border:1px solid #302a20;
+  border-radius:14px;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(226,196,119,.08),transparent 55%),
+    #0d0d0d;
+}
+
+.time-number{
+  color:#e2c477;
+  font-size:clamp(30px,7vw,52px);
+  line-height:1;
+  font-weight:950;
+  letter-spacing:-2px;
+}
+
+.time-label{
+  margin-top:6px;
+  color:#65605a;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
 
 .hero-image{
   max-width:850px;
-  margin:42px auto 0;
+  margin:38px auto 0;
   padding:5px;
   border:1px solid #4b3d22;
   border-radius:20px;
   background:#101010;
+  position:relative;
+  overflow:hidden;
 }
 
 .hero-image img{
@@ -197,8 +299,36 @@ h1{
   border-radius:15px;
 }
 
+.image-overlay{
+  position:absolute;
+  left:25px;
+  right:25px;
+  bottom:22px;
+  padding:20px;
+  border-radius:14px;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.15)
+  );
+  text-align:left;
+}
 
-/* GENERAL SECTIONS */
+.image-overlay strong{
+  display:block;
+  font-size:16px;
+}
+
+.image-overlay small{
+  display:block;
+  margin-top:4px;
+  color:#ccc5ba;
+  font-size:10px;
+}
+
+/* =========================
+   GENERAL
+========================= */
 
 section{
   padding:80px 0;
@@ -208,7 +338,7 @@ section{
   text-align:center;
   color:#d5b76b;
   font-size:10px;
-  font-weight:900;
+  font-weight:950;
   letter-spacing:2px;
   margin-bottom:14px;
 }
@@ -222,17 +352,18 @@ section{
 }
 
 .section-text{
-  max-width:620px;
+  max-width:650px;
   margin:18px auto 0;
   text-align:center;
   color:#77716a;
   font-size:13px;
 }
 
+/* =========================
+   WEBINAR VALUE
+========================= */
 
-/* VALUE */
-
-.value-card{
+.webinar-card{
   max-width:900px;
   margin:40px auto 0;
   border:1px solid #302a20;
@@ -241,139 +372,74 @@ section{
   background:#0d0d0c;
 }
 
-.value-header{
-  padding:40px 20px;
+.webinar-header{
+  padding:40px 22px;
   text-align:center;
   border-bottom:1px solid #222;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(226,196,119,.1),transparent 55%),
+    #10100e;
 }
 
-.value-header small{
+.webinar-header small{
   color:#77716a;
-  font-size:10px;
+  font-size:9px;
   text-transform:uppercase;
-  letter-spacing:1px;
+  letter-spacing:1.5px;
 }
 
-.big-price{
-  margin-top:5px;
-  color:#e2c477;
-  font-size:clamp(60px,13vw,100px);
-  line-height:.9;
-  font-weight:950;
-  letter-spacing:-5px;
+.webinar-header h3{
+  margin-top:8px;
+  font-size:clamp(28px,6vw,48px);
+  line-height:1;
+  letter-spacing:-2px;
 }
 
-.value-header p{
-  margin-top:12px;
-  color:#5f5a54;
-  font-size:10px;
+.webinar-header p{
+  max-width:570px;
+  margin:13px auto 0;
+  color:#706b64;
+  font-size:11px;
 }
 
-.free-badge{
-  display:inline-block;
-  margin-top:17px;
-  padding:8px 13px;
-  border:1px solid #4d4024;
-  border-radius:30px;
-  color:#e2c477;
-  font-size:10px;
-  font-weight:900;
-}
-
-.value-row{
+.topic-row{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  gap:15px;
+  gap:14px;
   padding:19px 22px;
   border-bottom:1px solid #202020;
 }
 
-.value-left{
-  display:flex;
-  align-items:center;
-  gap:13px;
-}
-
-.number{
-  width:37px;
-  height:37px;
-  min-width:37px;
+.topic-number{
+  width:38px;
+  height:38px;
+  min-width:38px;
   display:flex;
   align-items:center;
   justify-content:center;
   border-radius:9px;
-  border:1px solid #3d3321;
   background:#12110e;
+  border:1px solid #3d3321;
   color:#e2c477;
   font-size:9px;
-  font-weight:900;
+  font-weight:950;
 }
 
-.value-name{
+.topic-name{
   color:#e9e3d9;
   font-size:12px;
-  font-weight:900;
+  font-weight:950;
 }
 
-.value-desc{
+.topic-desc{
   margin-top:2px;
   color:#615d56;
   font-size:9px;
 }
 
-.value-price{
-  color:#aaa39a;
-  font-size:12px;
-  font-weight:900;
-  white-space:nowrap;
-}
-
-.total{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:22px;
-  background:#15130f;
-  border-top:1px solid #493b21;
-}
-
-.total-label{
-  font-size:11px;
-  font-weight:900;
-}
-
-.total-prices{
-  display:flex;
-  align-items:center;
-  gap:9px;
-}
-
-.total-old{
-  color:#65605a;
-  font-size:11px;
-  text-decoration:line-through;
-}
-
-.total-free{
-  color:#e2c477;
-  font-size:20px;
-  font-weight:950;
-}
-
-.value-cta{
-  text-align:center;
-  margin-top:25px;
-}
-
-.value-cta p{
-  margin-top:8px;
-  color:#55514b;
-  font-size:9px;
-}
-
-
-/* LEARNING GRID */
+/* =========================
+   LEARNING GRID
+========================= */
 
 .grid{
   margin:40px auto 0;
@@ -385,10 +451,16 @@ section{
 
 .card{
   padding:24px;
-  min-height:190px;
+  min-height:185px;
   border:1px solid #242424;
   border-radius:15px;
   background:#0d0d0d;
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#4b3d22;
 }
 
 .card-number{
@@ -402,8 +474,8 @@ section{
   border:1px solid #3c321f;
   color:#e2c477;
   font-size:9px;
-  font-weight:900;
-  margin-bottom:25px;
+  font-weight:950;
+  margin-bottom:24px;
 }
 
 .card h3{
@@ -416,8 +488,9 @@ section{
   font-size:10px;
 }
 
-
-/* ROADMAP */
+/* =========================
+   ROADMAP
+========================= */
 
 .roadmap{
   max-width:800px;
@@ -427,7 +500,7 @@ section{
 .roadmap-item{
   display:flex;
   gap:17px;
-  padding-bottom:25px;
+  padding-bottom:27px;
 }
 
 .road-number{
@@ -442,7 +515,7 @@ section{
   border:1px solid #3e3422;
   color:#e2c477;
   font-size:9px;
-  font-weight:900;
+  font-weight:950;
 }
 
 .road-content h3{
@@ -455,10 +528,11 @@ section{
   font-size:11px;
 }
 
+/* =========================
+   WHO IS IT FOR
+========================= */
 
-/* COMMUNITY */
-
-.community{
+.audience{
   max-width:850px;
   margin:40px auto 0;
   display:grid;
@@ -466,32 +540,30 @@ section{
   gap:12px;
 }
 
-.community-card{
+.audience-card{
   padding:27px;
   border:1px solid #242424;
   border-radius:15px;
   background:#0d0d0d;
 }
 
-.community-card.highlight{
-  border-color:#4b3d22;
-  background:#12100c;
-}
-
-.community-card h3{
+.audience-card h3{
   font-size:15px;
   margin-bottom:8px;
 }
 
-.community-card p{
+.audience-card p{
   color:#66615a;
   font-size:11px;
 }
 
-
-/* BIG CTA */
+/* =========================
+   CTA
+========================= */
 
 .cta-box{
+  position:relative;
+  overflow:hidden;
   max-width:950px;
   margin:auto;
   padding:65px 25px;
@@ -499,6 +571,27 @@ section{
   border:1px solid #4b3d22;
   border-radius:23px;
   background:#0e0d0b;
+  box-shadow:0 25px 80px rgba(0,0,0,.35);
+}
+
+.cta-box:before{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  left:50%;
+  top:-220px;
+  transform:translateX(-50%);
+  background:radial-gradient(
+    circle,
+    rgba(226,196,119,.13),
+    transparent 70%
+  );
+}
+
+.cta-box > *{
+  position:relative;
+  z-index:1;
 }
 
 .cta-box .mini{
@@ -509,7 +602,7 @@ section{
   border:1px solid #3d321f;
   color:#e2c477;
   font-size:9px;
-  font-weight:900;
+  font-weight:950;
   margin-bottom:17px;
 }
 
@@ -529,25 +622,56 @@ section{
   font-size:13px;
 }
 
+/* =========================
+   WHATSAPP
+========================= */
+
+.community{
+  max-width:850px;
+  margin:35px auto 0;
+  padding:28px 24px;
+  border:1px solid rgba(37,211,102,.28);
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 15% 0%,rgba(37,211,102,.10),transparent 35%),
+    #0d0f0e;
+  text-align:center;
+}
+
+.community-kicker{
+  color:#71e89a;
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1.6px;
+  margin-bottom:8px;
+}
+
+.community h3{
+  font-size:clamp(22px,4vw,34px);
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.community p{
+  max-width:570px;
+  margin:0 auto 17px;
+  color:#77716a;
+  font-size:11px;
+}
+
 .whatsapp{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:55px;
+  min-height:52px;
   padding:0 27px;
   border-radius:10px;
   background:#25d366;
-  color:white;
-  font-size:12px;
-  font-weight:900;
+  color:#fff;
+  font-size:11px;
+  font-weight:950;
+  box-shadow:0 12px 35px rgba(37,211,102,.16);
 }
-
-.cta-note{
-  margin-top:10px;
-  color:#514d47;
-  font-size:9px;
-}
-
 
 /* =========================
    FAQ
@@ -558,38 +682,9 @@ section{
   background:#080808;
 }
 
-.faq-label{
-  text-align:center;
-  color:#e2c477;
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:2px;
-  margin-bottom:15px;
-}
-
-.faq-title{
-  text-align:center;
-  font-size:clamp(40px,8vw,65px);
-  line-height:.95;
-  letter-spacing:-3px;
-  font-weight:950;
-}
-
-.faq-title span{
-  color:#e2c477;
-}
-
-.faq-subtitle{
-  max-width:600px;
-  margin:18px auto 40px;
-  text-align:center;
-  color:#77716a;
-  font-size:13px;
-}
-
 .faq-list{
   max-width:800px;
-  margin:auto;
+  margin:40px auto 0;
 }
 
 .faq-item{
@@ -639,516 +734,9 @@ section{
   transform:rotate(45deg);
 }
 
-.faq-cta{
-  text-align:center;
-  margin-top:40px;
-}
-
-.faq-cta p{
-  color:#66615a;
-  font-size:10px;
-  margin-bottom:12px;
-}
-
-.faq-cta a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:52px;
-  padding:0 25px;
-  border-radius:10px;
-  background:#e2c477;
-  color:#111;
-  font-size:11px;
-  font-weight:950;
-}
-
-
-/* FINAL */
-
-.final{
-  text-align:center;
-  padding:80px 0 110px;
-}
-
-.final h2{
-  max-width:780px;
-  margin:auto;
-  font-size:clamp(40px,8vw,70px);
-  line-height:.94;
-  letter-spacing:-3px;
-  font-weight:950;
-}
-
-.final p{
-  max-width:530px;
-  margin:17px auto 27px;
-  color:#69645d;
-  font-size:12px;
-}
-
-
-/* FOOTER */
-
-footer{
-  border-top:1px solid #202020;
-  padding:25px 0 90px;
-  text-align:center;
-  color:#46423d;
-  font-size:9px;
-}
-
-
-/* MOBILE CTA */
-
-.mobile-cta{
-  display:none;
-}
-
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-  .hero{
-    padding-top:55px;
-  }
-
-  h1{
-    letter-spacing:-3px;
-  }
-
-  .hero-text{
-    font-size:13px;
-  }
-
-  .buttons{
-    flex-direction:column;
-  }
-
-  .primary,
-  .secondary{
-    width:100%;
-    max-width:360px;
-  }
-
-  .hero-image img{
-    height:270px;
-  }
-
-  section{
-    padding:65px 0;
-  }
-
-  .section-title{
-    letter-spacing:-2px;
-  }
-
-  .value-row{
-    padding:17px 15px;
-  }
-
-  .value-left{
-    gap:9px;
-  }
-
-  .number{
-    width:34px;
-    height:34px;
-    min-width:34px;
-  }
-
-  .value-name{
-    font-size:11px;
-  }
-
-  .value-desc{
-    max-width:190px;
-    font-size:8px;
-  }
-
-  .value-price{
-    font-size:10px;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .community{
-    grid-template-columns:1fr;
-  }
-
-  .cta-box{
-    padding:55px 18px;
-  }
-
-  .cta-box h2{
-    letter-spacing:-2.5px;
-  }
-
-  .whatsapp{
-    width:100%;
-    max-width:360px;
-  }
-
-  .faq-section{
-    padding:70px 0;
-  }
-
-  .faq-title{
-    letter-spacing:-2px;
-  }
-
-  .faq-question{
-    padding:20px 3px;
-    font-size:12px;
-  }
-
-  .faq-answer{
-    padding-right:20px;
-    font-size:10px;
-  }
-
-  .faq-cta a{
-    width:100%;
-    max-width:360px;
-  }
-
-  .mobile-cta{
-    display:block;
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index:9999;
-    padding:9px;
-    background:rgba(7,7,7,.97);
-    border-top:1px solid #332a1b;
-  }
-
-  .mobile-cta a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    height:48px;
-    border-radius:9px;
-    background:#e2c477;
-    color:#111;
-    font-size:10px;
-    font-weight:950;
-  }
-
-  footer{
-    padding-bottom:75px;
-  }
-
-}
-
-
-/* SMALL PHONES */
-
-@media(max-width:390px){
-
-  h1{
-    font-size:43px;
-  }
-
-  .hero-image img{
-    height:225px;
-  }
-
-  .value-desc{
-    max-width:145px;
-  }
-
-  .value-price{
-    font-size:9px;
-  }
-
-}
-
-
 /* =========================
-   CONVERSION / COMMUNITY UPGRADE
-   ========================= */
-
-:root{
-  --gold:#e2c477;
-  --gold2:#f4d990;
-  --wa:#25d366;
-}
-
-body{
-  background:
-    radial-gradient(circle at 50% -10%, rgba(226,196,119,.11), transparent 34%),
-    #070707;
-}
-
-nav{
-  backdrop-filter:blur(16px);
-  box-shadow:0 8px 35px rgba(0,0,0,.28);
-}
-
-.nav-btn{
-  box-shadow:0 8px 25px rgba(226,196,119,.18);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-
-.nav-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 12px 35px rgba(226,196,119,.28);
-}
-
-.hero{
-  position:relative;
-  overflow:hidden;
-}
-
-.hero:before{
-  content:"";
-  position:absolute;
-  width:520px;
-  height:520px;
-  left:50%;
-  top:-260px;
-  transform:translateX(-50%);
-  background:radial-gradient(circle,rgba(226,196,119,.12),transparent 68%);
-  pointer-events:none;
-}
-
-.hero > .container{
-  position:relative;
-  z-index:1;
-}
-
-.tag{
-  box-shadow:0 0 0 5px rgba(226,196,119,.025), 0 12px 40px rgba(226,196,119,.08);
-}
-
-h1{
-  text-shadow:0 10px 50px rgba(226,196,119,.08);
-}
-
-.hero-text strong{
-  color:#ddd6cb;
-}
-
-.primary,
-.whatsapp,
-.faq-cta a{
-  transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
-}
-
-.primary{
-  box-shadow:0 12px 35px rgba(226,196,119,.17);
-}
-
-.primary:hover,
-.whatsapp:hover,
-.faq-cta a:hover{
-  transform:translateY(-3px);
-  filter:brightness(1.04);
-}
-
-.primary:active,
-.whatsapp:active{
-  transform:translateY(0);
-}
-
-.hero-image-link{
-  position:relative;
-  display:block;
-  cursor:pointer;
-  transition:transform .3s ease, box-shadow .3s ease;
-  overflow:hidden;
-}
-
-.hero-image-link:hover{
-  transform:translateY(-5px);
-  box-shadow:0 24px 70px rgba(0,0,0,.45), 0 0 0 1px rgba(226,196,119,.18);
-}
-
-.hero-image-link img{
-  transition:transform .7s cubic-bezier(.2,.7,.2,1), filter .4s ease;
-}
-
-.hero-image-link:hover img{
-  transform:scale(1.025);
-  filter:brightness(.82);
-}
-
-.hero-image-link:after{
-  content:"";
-  position:absolute;
-  inset:5px;
-  border-radius:15px;
-  background:linear-gradient(to top,rgba(0,0,0,.78),rgba(0,0,0,0) 58%);
-  pointer-events:none;
-}
-
-.image-badge{
-  position:absolute;
-  z-index:3;
-  top:18px;
-  left:18px;
-  padding:8px 12px;
-  border-radius:999px;
-  background:rgba(7,7,7,.78);
-  border:1px solid rgba(226,196,119,.5);
-  color:var(--gold2);
-  font-size:9px;
-  font-weight:950;
-  letter-spacing:1.2px;
-  backdrop-filter:blur(12px);
-}
-
-.image-overlay{
-  position:absolute;
-  z-index:3;
-  left:24px;
-  right:24px;
-  bottom:22px;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:3px;
-  text-align:left;
-  pointer-events:none;
-}
-
-.image-overlay span{
-  font-size:23px;
-  margin-bottom:2px;
-}
-
-.image-overlay strong{
-  color:#fff;
-  font-size:15px;
-  letter-spacing:.4px;
-}
-
-.image-overlay small{
-  color:#d0cbc3;
-  font-size:10px;
-}
-
-.community-card.highlight{
-  box-shadow:0 18px 55px rgba(226,196,119,.07);
-}
-
-.cta-box{
-  position:relative;
-  overflow:hidden;
-  box-shadow:0 25px 80px rgba(0,0,0,.35);
-}
-
-.cta-box:before{
-  content:"";
-  position:absolute;
-  width:300px;
-  height:300px;
-  left:50%;
-  top:-190px;
-  transform:translateX(-50%);
-  background:radial-gradient(circle,rgba(226,196,119,.13),transparent 70%);
-  pointer-events:none;
-}
-
-.cta-box > *{
-  position:relative;
-  z-index:1;
-}
-
-.whatsapp{
-  background:linear-gradient(135deg,#25d366,#1fbd5a);
-  box-shadow:0 14px 40px rgba(37,211,102,.20);
-}
-
-.community-join-card{
-  max-width:850px;
-  margin:25px auto 0;
-  padding:26px 24px;
-  border:1px solid rgba(37,211,102,.28);
-  border-radius:18px;
-  background:
-    radial-gradient(circle at 15% 0%,rgba(37,211,102,.10),transparent 35%),
-    #0d0f0e;
-  text-align:center;
-}
-
-.community-join-card .join-kicker{
-  color:#71e89a;
-  font-size:9px;
-  font-weight:950;
-  letter-spacing:1.6px;
-  margin-bottom:8px;
-}
-
-.community-join-card h3{
-  font-size:clamp(22px,4vw,34px);
-  line-height:1;
-  margin-bottom:8px;
-}
-
-.community-join-card p{
-  color:#77716a;
-  font-size:11px;
-  max-width:520px;
-  margin:0 auto 16px;
-}
-
-.community-join-card a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:50px;
-  padding:0 24px;
-  border-radius:10px;
-  background:#25d366;
-  color:#fff;
-  font-size:11px;
-  font-weight:950;
-  box-shadow:0 12px 35px rgba(37,211,102,.16);
-}
-
-.mobile-cta a{
-  background:#25d366;
-  color:#fff;
-  box-shadow:0 8px 30px rgba(37,211,102,.18);
-}
-
-@media(max-width:700px){
-  .image-badge{
-    top:13px;
-    left:13px;
-    font-size:8px;
-  }
-
-  .image-overlay{
-    left:18px;
-    right:18px;
-    bottom:17px;
-  }
-
-  .image-overlay strong{
-    font-size:13px;
-  }
-
-  .community-join-card{
-    padding:23px 17px;
-  }
-
-  .community-join-card a{
-    width:100%;
-    max-width:360px;
-  }
-}
-
-
-/* =========================
-   MCQ / QUICK CHECK
-   ========================= */
+   MCQ
+========================= */
 
 .mcq-section{
   padding:90px 0;
@@ -1173,10 +761,6 @@ h1{
 .mcq-head{
   padding:18px 20px;
   border-bottom:1px solid #222;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
 }
 
 .mcq-number{
@@ -1208,7 +792,6 @@ h1{
   color:#aaa39a;
   padding:13px 14px;
   text-align:left;
-  font:inherit;
   font-size:11px;
   cursor:pointer;
   transition:.2s ease;
@@ -1217,7 +800,6 @@ h1{
 .mcq-option:hover{
   border-color:#514426;
   color:#eee8df;
-  transform:translateX(2px);
 }
 
 .mcq-option.correct{
@@ -1243,175 +825,239 @@ h1{
   display:block;
 }
 
-.mcq-result{
-  margin-top:20px;
-  padding:22px;
-  border:1px solid #4b3d22;
-  border-radius:16px;
-  background:#12100c;
+/* =========================
+   FINAL
+========================= */
+
+.final{
   text-align:center;
+  padding:80px 0 110px;
 }
 
-.mcq-score{
-  color:#e2c477;
-  font-size:28px;
+.final h2{
+  max-width:780px;
+  margin:auto;
+  font-size:clamp(40px,8vw,70px);
+  line-height:.94;
+  letter-spacing:-3px;
   font-weight:950;
 }
 
-.mcq-result p{
-  margin:5px auto 15px;
-  color:#77716a;
-  font-size:10px;
+.final p{
+  max-width:560px;
+  margin:17px auto 27px;
+  color:#69645d;
+  font-size:12px;
 }
 
-.mcq-result a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:48px;
-  padding:0 22px;
-  border-radius:10px;
-  background:#25d366;
-  color:#fff;
-  font-size:10px;
-  font-weight:950;
-}
+/* =========================
+   FOOTER
+========================= */
 
-.mcq-note{
+footer{
+  border-top:1px solid #202020;
+  padding:25px 0 90px;
   text-align:center;
-  color:#55514b;
+  color:#46423d;
   font-size:9px;
-  margin-top:14px;
 }
+
+/* =========================
+   MOBILE CTA
+========================= */
+
+.mobile-cta{
+  display:none;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:700px){
+
+  .hero{
+    padding-top:50px;
+  }
+
+  h1{
+    letter-spacing:-3px;
+  }
+
+  .hero-text{
+    font-size:13px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .primary,
+  .secondary{
+    width:100%;
+    max-width:360px;
+  }
+
+  .countdown{
+    gap:6px;
+  }
+
+  .time-box{
+    padding:16px 5px;
+  }
+
+  .time-number{
+    font-size:30px;
+  }
+
+  .time-label{
+    font-size:7px;
+  }
+
+  .hero-image img{
+    height:270px;
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .section-title{
+    letter-spacing:-2px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .audience{
+    grid-template-columns:1fr;
+  }
+
+  .cta-box{
+    padding:55px 18px;
+  }
+
+  .cta-box h2{
+    letter-spacing:-2.5px;
+  }
+
+  .whatsapp{
+    width:100%;
+    max-width:360px;
+  }
+
+  .mobile-cta{
+    display:block;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:9999;
+    padding:9px;
+    background:rgba(7,7,7,.97);
+    border-top:1px solid #332a1b;
+  }
+
+  .mobile-cta a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:48px;
+    border-radius:9px;
+    background:#e2c477;
+    color:#111;
+    font-size:10px;
+    font-weight:950;
+  }
+
+  .faq-section,
   .mcq-section{
     padding:70px 0;
   }
 
-  .mcq-question{
-    font-size:13px;
+  .faq-question{
+    padding:20px 3px;
+    font-size:12px;
   }
 
-  .mcq-option{
+  .faq-answer{
+    padding-right:20px;
     font-size:10px;
-    padding:12px;
+  }
+
+  footer{
+    padding-bottom:75px;
   }
 }
-
-
-.transparency-section{
-  padding:70px 0 20px;
-}
-.transparency-card{
-  max-width:800px;
-  margin:auto;
-  padding:35px 25px;
-  text-align:center;
-  border:1px solid #292929;
-  border-radius:18px;
-  background:#0d0d0d;
-}
-.transparency-card h2{
-  font-size:clamp(28px,6vw,45px);
-  line-height:1;
-  letter-spacing:-2px;
-}
-.transparency-card p{
-  max-width:650px;
-  margin:15px auto 0;
-  color:#77716a;
-  font-size:12px;
-  line-height:1.7;
-}
-.transparency-points{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:9px;
-  margin-top:20px;
-}
-.transparency-points span{
-  padding:9px 12px;
-  border:1px solid #292929;
-  border-radius:999px;
-  color:#aaa39a;
-  background:#111;
-  font-size:9px;
-  font-weight:800;
-}
-@media(max-width:700px){
-  .transparency-section{padding:55px 0 10px}
-  .transparency-card{padding:28px 18px}
-}
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
-
   <div class="container nav-inner">
 
     <div class="logo">
-      ZERO <span>TO</span> BRAND
+      DROPSHIPPING <span>FROM ZERO</span>
     </div>
 
     <a
       class="nav-btn"
-      href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-      target="_blank"
-      rel="noopener"
+      href="#register"
     >
-      JOIN FREE →
+      JOIN WEBINAR →
     </a>
 
   </div>
-
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
   <div class="container">
 
-    <div class="tag">
-      LEARN TO BUILD A BRAND FROM ZERO
+    <div class="webinar-badge">
+      <span class="live-dot"></span>
+      FREE LIVE WEBINAR
     </div>
 
     <h1>
-      Build Your Brand.
+      Learn Dropshipping.
       <br>
       Start From
       <span class="gold">Zero.</span>
     </h1>
 
     <p class="hero-text">
-      Learn practical fundamentals for understanding how brands are built. —
+      Learn how the dropshipping model works —
       from <strong>product research</strong> and
-      <strong>branding</strong> to
-      <strong>ads</strong> and
-      <strong>launch strategy.</strong>
+      <strong>suppliers</strong> to
+      <strong>store setup</strong> and
+      <strong>marketing.</strong>
     </p>
 
-    <div class="price-line">
+    <div class="date-line">
 
-      <span class="old-price">
-        FREE LEARNING ACCESS
-      </span>
+      <div class="date-pill">
+        📅 <strong>SUNDAY</strong> • 30 AUGUST 2026
+      </div>
 
-      <span>→</span>
+      <div class="date-pill">
+        🕐 <strong>8:00 PM IST</strong>
+      </div>
 
-      <span class="free-price">
-        JOIN FOR ₹0
-      </span>
+      <div class="date-pill">
+        🎟 <strong>FREE</strong>
+      </div>
 
     </div>
 
@@ -1419,38 +1065,85 @@ h1{
 
       <a
         class="primary"
-        href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-        target="_blank"
-        rel="noopener"
+        href="#register"
       >
-        JOIN WHATSAPP COMMUNITY →
+        JOIN THE FREE WEBINAR →
       </a>
 
       <a
         class="secondary"
-        href="#value"
+        href="#learn"
       >
-        SEE WHAT'S INCLUDED ↓
+        SEE WHAT YOU'LL LEARN ↓
       </a>
 
     </div>
 
     <p class="small-note">
-      No payment required • Start with the fundamentals
+      Free access • Beginner friendly • No payment required
     </p>
 
 
-    <a class="hero-image hero-image-link" href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH" target="_blank" rel="noopener" aria-label="Join the Zero to Brand WhatsApp Community">
-      <div class="image-badge">FREE COMMUNITY ACCESS</div>
+    <!-- COUNTDOWN -->
+
+    <div class="countdown-wrap">
+
+      <div class="countdown-title">
+        Webinar starts in
+      </div>
+
+      <div class="countdown">
+
+        <div class="time-box">
+          <div class="time-number" id="days">00</div>
+          <div class="time-label">DAYS</div>
+        </div>
+
+        <div class="time-box">
+          <div class="time-number" id="hours">00</div>
+          <div class="time-label">HOURS</div>
+        </div>
+
+        <div class="time-box">
+          <div class="time-number" id="minutes">00</div>
+          <div class="time-label">MINUTES</div>
+        </div>
+
+        <div class="time-box">
+          <div class="time-number" id="seconds">00</div>
+          <div class="time-label">SECONDS</div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- HERO IMAGE -->
+
+    <a
+      class="hero-image"
+      href="#register"
+      aria-label="Join the free dropshipping webinar"
+    >
+
       <img
         src="https://cdn.corenexis.com/f/2xRtJcl7gVH.jpeg"
-        alt="Join Zero to Brand WhatsApp Community"
+        alt="Free Dropshipping Webinar"
       >
+
       <div class="image-overlay">
-        <span>🐇</span>
-        <strong>JOIN THE COMMUNITY →</strong>
-        <small>Tap the image to get free access</small>
+
+        <strong>
+          JOIN THE FREE DROPSHIPPING WEBINAR →
+        </strong>
+
+        <small>
+          Sunday • 30 August 2026 • Free access
+        </small>
+
       </div>
+
     </a>
 
   </div>
@@ -1458,247 +1151,11 @@ h1{
 </section>
 
 
-<!-- VALUE SECTION -->
-
-<section id="value">
-
-  <div class="container">
-
-    <div class="label">
-      WHAT'S INCLUDED
-    </div>
-
-    <h2 class="section-title">
-      Understand the pieces
-      <span class="gold">behind a brand.</span>
-    </h2>
-
-    <p class="section-text">
-      Zero to Brand is designed to help you understand the key foundations involved in building and marketing a brand.
-    </p>
-
-
-    <div class="value-card">
-
-      <div class="value-header">
-
-        <small>
-          ESTIMATED LEARNING VALUE
-        </small>
-
-        <div class="big-price">
-          ₹0
-        </div>
-
-        <p>
-          Explore the learning areas available inside the community.
-        </p>
-
-        <div class="free-badge">
-          FREE COMMUNITY ACCESS
-        </div>
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="number">01</div>
-
-          <div>
-
-            <div class="value-name">
-              Product Research
-            </div>
-
-            <div class="value-desc">
-              Products, customers, competitors & opportunities
-            </div>
-
-          </div>
-
-        </div>
-
-        
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="number">02</div>
-
-          <div>
-
-            <div class="value-name">
-              Brand Strategy
-            </div>
-
-            <div class="value-desc">
-              Positioning, offers & differentiation
-            </div>
-
-          </div>
-
-        </div>
-
-        
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="number">03</div>
-
-          <div>
-
-            <div class="value-name">
-              Brand Identity
-            </div>
-
-            <div class="value-desc">
-              Naming, visuals, messaging & consistency
-            </div>
-
-          </div>
-
-        </div>
-
-        
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="number">04</div>
-
-          <div>
-
-            <div class="value-name">
-              Ads Creation
-            </div>
-
-            <div class="value-desc">
-              Hooks, creatives, structure & attention
-            </div>
-
-          </div>
-
-        </div>
-
-        
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="number">05</div>
-
-          <div>
-
-            <div class="value-name">
-              Launch Strategy
-            </div>
-
-            <div class="value-desc">
-              Preparation, anticipation & launch
-            </div>
-
-          </div>
-
-        </div>
-
-        
-
-      </div>
-
-
-      <div class="value-row">
-
-        <div class="value-left">
-
-          <div class="number">06</div>
-
-          <div>
-
-            <div class="value-name">
-              Marketing Fundamentals
-            </div>
-
-            <div class="value-desc">
-              Audience, content, distribution & growth basics
-            </div>
-
-          </div>
-
-        </div>
-
-        
-
-      </div>
-
-
-      <div class="total">
-
-        <div class="total-label">
-          COMMUNITY ACCESS
-        </div>
-
-        <div class="total-prices">
-
-          <span class="total-old">
-            FREE
-          </span>
-
-          <span class="total-free">
-            ₹0
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="value-cta">
-
-      <a
-        class="primary"
-        href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-        target="_blank"
-        rel="noopener"
-      >
-        JOIN THE COMMUNITY →
-      </a>
-
-      <p>
-        Join the Zero to Brand WhatsApp Community.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- LEARNING -->
-
-<section>
+<!-- =========================
+     WHAT WEBINAR COVERS
+========================= -->
+
+<section id="learn">
 
   <div class="container">
 
@@ -1707,31 +1164,180 @@ h1{
     </div>
 
     <h2 class="section-title">
-      From idea
-      <span class="gold">to brand.</span>
+      Dropshipping,
+      <span class="gold">simplified.</span>
     </h2>
 
     <p class="section-text">
-      Understand the major decisions involved in
-      creating, positioning and marketing a brand.
+      A beginner-focused session covering the fundamental parts
+      of starting and understanding a dropshipping business.
+    </p>
+
+
+    <div class="webinar-card">
+
+      <div class="webinar-header">
+
+        <small>
+          FREE LIVE SESSION
+        </small>
+
+        <h3>
+          Inside The Webinar
+        </h3>
+
+        <p>
+          We'll break the model down into practical steps
+          so you understand what happens from product selection
+          to customer order.
+        </p>
+
+      </div>
+
+
+      <div class="topic-row">
+
+        <div class="topic-number">01</div>
+
+        <div>
+          <div class="topic-name">
+            Dropshipping Basics
+          </div>
+
+          <div class="topic-desc">
+            Understand the model, how it works and the basic process.
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="topic-row">
+
+        <div class="topic-number">02</div>
+
+        <div>
+          <div class="topic-name">
+            Product Research
+          </div>
+
+          <div class="topic-desc">
+            Learn what to look for when researching potential products.
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="topic-row">
+
+        <div class="topic-number">03</div>
+
+        <div>
+          <div class="topic-name">
+            Finding Suppliers
+          </div>
+
+          <div class="topic-desc">
+            Understand supplier research, product quality and fulfilment.
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="topic-row">
+
+        <div class="topic-number">04</div>
+
+        <div>
+          <div class="topic-name">
+            Store Setup
+          </div>
+
+          <div class="topic-desc">
+            Learn the basic elements an e-commerce store needs.
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="topic-row">
+
+        <div class="topic-number">05</div>
+
+        <div>
+          <div class="topic-name">
+            Content & Marketing
+          </div>
+
+          <div class="topic-desc">
+            Understand content, creative testing and the basics of attracting customers.
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="topic-row">
+
+        <div class="topic-number">06</div>
+
+        <div>
+          <div class="topic-name">
+            Testing & Improvement
+          </div>
+
+          <div class="topic-desc">
+            Learn why testing products, creatives and offers matters.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     LEARNING GRID
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="label">
+      THE DROPSHIPPING PROCESS
+    </div>
+
+    <h2 class="section-title">
+      From product
+      <span class="gold">to customer.</span>
+    </h2>
+
+    <p class="section-text">
+      Understand the major steps involved in the dropshipping model.
     </p>
 
 
     <div class="grid">
-
 
       <div class="card">
 
         <div class="card-number">01</div>
 
         <h3>
-          Product Research
+          Choose A Product
         </h3>
 
         <p>
-          Learn how to research products, customers,
-          competitors and opportunities before making
-          important decisions.
+          Research products based on customer needs,
+          demand, competition and practical considerations.
         </p>
 
       </div>
@@ -1742,13 +1348,12 @@ h1{
         <div class="card-number">02</div>
 
         <h3>
-          Brand Strategy
+          Find A Supplier
         </h3>
 
         <p>
-          Understand positioning, differentiation,
-          offers and the foundations that give a
-          brand direction.
+          Understand how suppliers work and what to
+          consider before listing a product.
         </p>
 
       </div>
@@ -1759,13 +1364,12 @@ h1{
         <div class="card-number">03</div>
 
         <h3>
-          Brand Identity
+          Build Your Store
         </h3>
 
         <p>
-          Learn how naming, visuals, messaging and
-          consistency shape how people perceive
-          a brand.
+          Learn the basic structure of an e-commerce
+          store and the information customers need.
         </p>
 
       </div>
@@ -1776,12 +1380,12 @@ h1{
         <div class="card-number">04</div>
 
         <h3>
-          Ads Creation
+          Create Content
         </h3>
 
         <p>
-          Learn the basics of hooks, creative concepts
-          and ad structures designed to capture attention.
+          Learn how product content and creative ideas
+          can be used to communicate value.
         </p>
 
       </div>
@@ -1792,13 +1396,12 @@ h1{
         <div class="card-number">05</div>
 
         <h3>
-          Launch Strategy
+          Market The Product
         </h3>
 
         <p>
-          Understand how to prepare your offer,
-          build anticipation and introduce it
-          to an audience.
+          Understand organic content, paid advertising
+          fundamentals and creative testing.
         </p>
 
       </div>
@@ -1809,16 +1412,15 @@ h1{
         <div class="card-number">06</div>
 
         <h3>
-          Marketing
+          Test & Learn
         </h3>
 
         <p>
-          Understand audiences, content, distribution
-          and the fundamentals of building attention.
+          Learn how to evaluate what is working and
+          improve your approach based on real data.
         </p>
 
       </div>
-
 
     </div>
 
@@ -1827,28 +1429,788 @@ h1{
 </section>
 
 
-<!-- ROADMAP -->
+<!-- =========================
+     ROADMAP
+========================= -->
 
 <section>
 
   <div class="container">
 
     <div class="label">
-      THE JOURNEY
+      WEBINAR ROADMAP
     </div>
 
     <h2 class="section-title">
-      Zero
-      <span class="gold">to Brand.</span>
+      What we'll cover
+      <span class="gold">live.</span>
     </h2>
-
-    <p class="section-text">
-      A simple framework for understanding the journey
-      behind building a brand.
-    </p>
 
 
     <div class="roadmap">
 
+      <div class="roadmap-item">
+
+        <div class="road-number">01</div>
+
+        <div class="road-content">
+
+          <h3>
+            Understand The Model
+          </h3>
+
+          <p>
+            We'll start with the fundamentals so you understand
+            exactly how a dropshipping transaction works.
+          </p>
+
+        </div>
+
+      </div>
+
 
       <div class="roadmap-item">
+
+        <div class="road-number">02</div>
+
+        <div class="road-content">
+
+          <h3>
+            Product Research
+          </h3>
+
+          <p>
+            Learn how to think about products, customers,
+            competition and demand.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="roadmap-item">
+
+        <div class="road-number">03</div>
+
+        <div class="road-content">
+
+          <h3>
+            Supplier & Store
+          </h3>
+
+          <p>
+            Understand the basic supplier and store decisions
+            beginners need to make.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="roadmap-item">
+
+        <div class="road-number">04</div>
+
+        <div class="road-content">
+
+          <h3>
+            Marketing & Content
+          </h3>
+
+          <p>
+            Learn the fundamentals of getting attention,
+            creating content and testing marketing ideas.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="roadmap-item">
+
+        <div class="road-number">05</div>
+
+        <div class="road-content">
+
+          <h3>
+            Your Next Steps
+          </h3>
+
+          <p>
+            Finish with a simple roadmap for what to learn,
+            build and test next.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WHO IS THIS FOR
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="label">
+      IS THIS FOR YOU?
+    </div>
+
+    <h2 class="section-title">
+      Start with
+      <span class="gold">the basics.</span>
+    </h2>
+
+    <div class="audience">
+
+      <div class="audience-card">
+
+        <h3>
+          👨‍💻 Complete Beginners
+        </h3>
+
+        <p>
+          You have heard about dropshipping but don't know
+          how the model actually works.
+        </p>
+
+      </div>
+
+
+      <div class="audience-card">
+
+        <h3>
+          🔎 Product Researchers
+        </h3>
+
+        <p>
+          You want to understand how to research products
+          before building a store.
+        </p>
+
+      </div>
+
+
+      <div class="audience-card">
+
+        <h3>
+          🛒 Aspiring Store Owners
+        </h3>
+
+        <p>
+          You want to understand the basic pieces needed
+          to create an e-commerce store.
+        </p>
+
+      </div>
+
+
+      <div class="audience-card">
+
+        <h3>
+          📱 Content Creators
+        </h3>
+
+        <p>
+          You want to learn how content and marketing fit
+          into a dropshipping business.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     REGISTER
+========================= -->
+
+<section id="register">
+
+  <div class="container">
+
+    <div class="cta-box">
+
+      <div class="mini">
+        FREE LIVE WEBINAR
+      </div>
+
+      <h2>
+        Ready to understand
+        <span class="gold">dropshipping?</span>
+      </h2>
+
+      <p>
+        Join us on Sunday, 30 August 2026 and learn
+        the fundamentals of dropshipping from zero.
+      </p>
+
+      <a
+        class="primary"
+        href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
+        target="_blank"
+        rel="noopener"
+      >
+        JOIN THE WEBINAR →
+      </a>
+
+      <p style="margin-top:10px;font-size:9px;">
+        Free access • Join through WhatsApp
+      </p>
+
+    </div>
+
+
+    <div class="community">
+
+      <div class="community-kicker">
+        WEBINAR UPDATES
+      </div>
+
+      <h3>
+        Join the WhatsApp Community
+      </h3>
+
+      <p>
+        Get webinar updates, reminders and important announcements
+        directly through the community.
+      </p>
+
+      <a
+        class="whatsapp"
+        href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
+        target="_blank"
+        rel="noopener"
+      >
+        JOIN WHATSAPP COMMUNITY →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MCQ
+========================= -->
+
+<section class="mcq-section">
+
+  <div class="container">
+
+    <div class="label">
+      QUICK CHECK
+    </div>
+
+    <h2 class="section-title">
+      How much do you
+      <span class="gold">know?</span>
+    </h2>
+
+    <p class="section-text">
+      Test your basic dropshipping knowledge before the webinar.
+    </p>
+
+
+    <div class="mcq-wrap">
+
+      <!-- QUESTION 1 -->
+
+      <div class="mcq-card">
+
+        <div class="mcq-head">
+          <div class="mcq-number">
+            QUESTION 01
+          </div>
+        </div>
+
+        <div class="mcq-question">
+          In a typical dropshipping model, who fulfils the product order?
+        </div>
+
+        <div class="mcq-options">
+
+          <button
+            class="mcq-option"
+            onclick="answer(this,false)"
+          >
+            The customer
+          </button>
+
+          <button
+            class="mcq-option"
+            onclick="answer(this,true)"
+          >
+            The supplier
+          </button>
+
+          <button
+            class="mcq-option"
+            onclick="answer(this,false)"
+          >
+            The advertising platform
+          </button>
+
+        </div>
+
+        <div class="mcq-feedback">
+          In a typical model, the supplier fulfils the order on behalf of the store.
+        </div>
+
+      </div>
+
+
+      <!-- QUESTION 2 -->
+
+      <div class="mcq-card">
+
+        <div class="mcq-head">
+          <div class="mcq-number">
+            QUESTION 02
+          </div>
+        </div>
+
+        <div class="mcq-question">
+          What should you research before choosing a product?
+        </div>
+
+        <div class="mcq-options">
+
+          <button
+            class="mcq-option"
+            onclick="answer(this,false)"
+          >
+            Only the product colour
+          </button>
+
+          <button
+            class="mcq-option"
+            onclick="answer(this,true)"
+          >
+            Customers, demand and competition
+          </button>
+
+          <button
+            class="mcq-option"
+            onclick="answer(this,false)"
+          >
+            Nothing
+          </button>
+
+        </div>
+
+        <div class="mcq-feedback">
+          Product research should consider customers, demand, competition and other practical factors.
+        </div>
+
+      </div>
+
+
+      <!-- QUESTION 3 -->
+
+      <div class="mcq-card">
+
+        <div class="mcq-head">
+          <div class="mcq-number">
+            QUESTION 03
+          </div>
+        </div>
+
+        <div class="mcq-question">
+          Does starting dropshipping guarantee that you will make money?
+        </div>
+
+        <div class="mcq-options">
+
+          <button
+            class="mcq-option"
+            onclick="answer(this,true)"
+          >
+            No
+          </button>
+
+          <button
+            class="mcq-option"
+            onclick="answer(this,false)"
+          >
+            Yes, always
+          </button>
+
+        </div>
+
+        <div class="mcq-feedback">
+          No business model guarantees income. Results depend on many factors and require testing and learning.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="faq-section">
+
+  <div class="container">
+
+    <div class="label">
+      FAQ
+    </div>
+
+    <h2 class="section-title">
+      Questions?
+      <span class="gold">Answered.</span>
+    </h2>
+
+    <p class="section-text">
+      A few things you may want to know before joining.
+    </p>
+
+
+    <div class="faq-list">
+
+
+      <div class="faq-item">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          Is the webinar really free?
+          <b>+</b>
+        </button>
+
+        <div class="faq-answer">
+          Yes. The webinar is designed as a free learning session.
+          No payment is required to join the webinar.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          When is the webinar?
+          <b>+</b>
+        </button>
+
+        <div class="faq-answer">
+          The webinar is scheduled for Sunday, 30 August 2026.
+          The current page displays 8:00 PM IST as the scheduled time.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          Do I need previous dropshipping experience?
+          <b>+</b>
+        </button>
+
+        <div class="faq-answer">
+          No. The session is designed around the fundamentals,
+          making it suitable for people who are just starting.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          Will I be guaranteed income?
+          <b>+</b>
+        </button>
+
+        <div class="faq-answer">
+          No. Dropshipping is a business model, not a guaranteed-income system.
+          The webinar focuses on understanding the process, learning the fundamentals
+          and making informed decisions.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          What will I need for the webinar?
+          <b>+</b>
+        </button>
+
+        <div class="faq-answer">
+          You simply need a device with internet access and a way to join the live session.
+          Joining the WhatsApp Community will help you receive important updates.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button
+          class="faq-question"
+          onclick="toggleFAQ(this)"
+        >
+          How do I get webinar updates?
+          <b>+</b>
+        </button>
+
+        <div class="faq-answer">
+          Join the WhatsApp Community using the registration button.
+          Important webinar announcements and reminders can be shared there.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="final">
+
+  <div class="container">
+
+    <div class="label">
+      30 AUGUST 2026
+    </div>
+
+    <h2>
+      Your dropshipping
+      <span class="gold">journey starts with learning.</span>
+    </h2>
+
+    <p>
+      Join the free live webinar and understand the fundamentals
+      before you start building.
+    </p>
+
+    <a
+      class="primary"
+      href="#register"
+    >
+      JOIN THE FREE WEBINAR →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="container">
+    Dropshipping From Zero • Free Live Webinar • 30 August 2026
+  </div>
+
+</footer>
+
+
+<!-- =========================
+     MOBILE CTA
+========================= -->
+
+<div class="mobile-cta">
+
+  <a href="#register">
+    JOIN FREE WEBINAR — 30 AUGUST →
+  </a>
+
+</div>
+
+
+<script>
+
+/* ==========================================
+   WEBINAR COUNTDOWN
+
+   CHANGE ONLY THIS LINE IF YOUR WEBINAR TIME
+   IS DIFFERENT.
+
+   Current placeholder:
+   30 August 2026 at 8:00 PM IST
+========================================== */
+
+const webinarDate = new Date(
+  "2026-08-30T20:00:00+05:30"
+).getTime();
+
+
+function updateCountdown(){
+
+  const now = new Date().getTime();
+
+  const distance = webinarDate - now;
+
+
+  if(distance <= 0){
+
+    document.getElementById("days").textContent = "00";
+    document.getElementById("hours").textContent = "00";
+    document.getElementById("minutes").textContent = "00";
+    document.getElementById("seconds").textContent = "00";
+
+    document.querySelector(".countdown-title").textContent =
+      "THE WEBINAR IS LIVE / STARTING NOW";
+
+    return;
+  }
+
+
+  const days = Math.floor(
+    distance / (1000 * 60 * 60 * 24)
+  );
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24))
+    / (1000 * 60 * 60)
+  );
+
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60))
+    / (1000 * 60)
+  );
+
+  const seconds = Math.floor(
+    (distance % (1000 * 60))
+    / 1000
+  );
+
+
+  document.getElementById("days").textContent =
+    String(days).padStart(2,"0");
+
+  document.getElementById("hours").textContent =
+    String(hours).padStart(2,"0");
+
+  document.getElementById("minutes").textContent =
+    String(minutes).padStart(2,"0");
+
+  document.getElementById("seconds").textContent =
+    String(seconds).padStart(2,"0");
+}
+
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+/* ==========================================
+   FAQ
+========================================== */
+
+function toggleFAQ(button){
+
+  const item = button.parentElement;
+
+  document.querySelectorAll(".faq-item").forEach(function(other){
+
+    if(other !== item){
+      other.classList.remove("active");
+    }
+
+  });
+
+  item.classList.toggle("active");
+}
+
+
+/* ==========================================
+   MCQ
+========================================== */
+
+function answer(button,correct){
+
+  const card = button.closest(".mcq-card");
+
+  const options = card.querySelectorAll(".mcq-option");
+
+  const feedback = card.querySelector(".mcq-feedback");
+
+
+  options.forEach(function(option){
+
+    option.disabled = true;
+
+  });
+
+
+  if(correct){
+
+    button.classList.add("correct");
+
+  }else{
+
+    button.classList.add("wrong");
+
+    options.forEach(function(option){
+
+      if(option.getAttribute("onclick") &&
+         option.getAttribute("onclick").includes("true")){
+
+        option.classList.add("correct");
+
+      }
+
+    });
+
+  }
+
+
+  feedback.classList.add("show");
+}
+
+</script>
+
+</body>
+</html>
