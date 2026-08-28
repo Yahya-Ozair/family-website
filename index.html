@@ -1,2257 +1,1147 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Free Dropshipping Webinar | 30 August 2026</title>
-
-<meta
-name="description"
-content="Join the free live dropshipping webinar on 30 August 2026. Learn the fundamentals of dropshipping from zero."
->
-
-<style>
-
-/* =====================================================
-   RESET
-===================================================== */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:#050505;
-  color:#f5f1e8;
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.5;
-  overflow-x:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-button{
-  font-family:inherit;
-}
-
-.container{
-  width:92%;
-  max-width:850px;
-  margin:auto;
-}
-
-.gold{
-  color:#e2c477;
-}
-
-
-/* =====================================================
-   BACKGROUND
-===================================================== */
-
-body:before{
-  content:"";
-
-  position:fixed;
-
-  width:650px;
-  height:650px;
-
-  left:50%;
-  top:-480px;
-
-  transform:translateX(-50%);
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(226,196,119,.16),
-      transparent 68%
-    );
-
-  pointer-events:none;
-
-  z-index:-1;
-}
-
-
-/* =====================================================
-   NAV
-===================================================== */
-
-nav{
-  position:sticky;
-  top:0;
-
-  z-index:1000;
-
-  background:rgba(5,5,5,.94);
-
-  backdrop-filter:blur(18px);
-
-  border-bottom:1px solid #222;
-}
-
-.nav-inner{
-  height:62px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-}
-
-.logo{
-  font-size:12px;
-
-  font-weight:950;
-
-  letter-spacing:1.5px;
-}
-
-.logo span{
-  color:#e2c477;
-}
-
-.nav-btn{
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  padding:9px 15px;
-
-  border-radius:8px;
-
-  background:#e2c477;
-
-  color:#111;
-
-  font-size:9px;
-
-  font-weight:950;
-
-  box-shadow:
-    0 8px 25px
-    rgba(226,196,119,.14);
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero{
-  text-align:center;
-
-  padding:55px 0 35px;
-
-  position:relative;
-}
-
-.hero:after{
-  content:"";
-
-  position:absolute;
-
-  width:420px;
-  height:420px;
-
-  left:50%;
-  top:0;
-
-  transform:translateX(-50%);
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(226,196,119,.07),
-      transparent 70%
-    );
-
-  pointer-events:none;
-
-  z-index:-1;
-}
-
-.kicker{
-  display:inline-flex;
-
-  align-items:center;
-
-  gap:7px;
-
-  padding:8px 14px;
-
-  border:1px solid #5b4a28;
-
-  border-radius:999px;
-
-  background:#11100d;
-
-  color:#e2c477;
-
-  font-size:9px;
-
-  font-weight:950;
-
-  letter-spacing:1.2px;
-
-  box-shadow:
-    0 10px 35px
-    rgba(226,196,119,.07);
-}
-
-.live-dot{
-  width:6px;
-  height:6px;
-
-  border-radius:50%;
-
-  background:#e2c477;
-
-  box-shadow:
-    0 0 12px
-    rgba(226,196,119,.8);
-}
-
-h1{
-  margin-top:21px;
-
-  font-size:
-    clamp(
-      44px,
-      10vw,
-      82px
-    );
-
-  line-height:.88;
-
-  letter-spacing:-4px;
-
-  font-weight:950;
-
-  text-shadow:
-    0 15px 50px
-    rgba(226,196,119,.08);
-}
-
-.hero-text{
-  max-width:600px;
-
-  margin:22px auto 0;
-
-  color:#858078;
-
-  font-size:13px;
-
-  line-height:1.7;
-}
-
-.hero-text strong{
-  color:#e8e1d7;
-}
-
-
-/* =====================================================
-   DATE
-===================================================== */
-
-.date-row{
-  margin:25px auto 0;
-
-  display:flex;
-
-  justify-content:center;
-
-  flex-wrap:wrap;
-
-  gap:7px;
-}
-
-.date-box{
-  padding:9px 12px;
-
-  border:1px solid #292929;
-
-  border-radius:8px;
-
-  background:#0c0c0c;
-
-  color:#aaa39a;
-
-  font-size:9px;
-
-  font-weight:900;
-}
-
-.date-box strong{
-  color:#e2c477;
-}
-
-
-/* =====================================================
-   COUNTDOWN
-===================================================== */
-
-.timer-heading{
-  margin-top:26px;
-
-  color:#5d5851;
-
-  font-size:8px;
-
-  font-weight:950;
-
-  letter-spacing:2px;
-}
-
-.timer{
-  margin-top:9px;
-
-  display:flex;
-
-  justify-content:center;
-
-  gap:7px;
-}
-
-.timer-box{
-  width:68px;
-
-  padding:12px 5px;
-
-  border:1px solid #332b1e;
-
-  border-radius:10px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #15130f,
-      #0b0b0b
-    );
-}
-
-.timer-number{
-  color:#e2c477;
-
-  font-size:25px;
-
-  line-height:1;
-
-  font-weight:950;
-}
-
-.timer-label{
-  margin-top:5px;
-
-  color:#55514b;
-
-  font-size:7px;
-
-  font-weight:900;
-
-  letter-spacing:.5px;
-}
-
-
-/* =====================================================
-   URGENCY
-===================================================== */
-
-.urgency{
-  max-width:530px;
-
-  margin:20px auto 0;
-
-  padding:11px 14px;
-
-  border:1px solid
-    rgba(226,196,119,.24);
-
-  border-radius:9px;
-
-  background:
-    rgba(226,196,119,.045);
-
-  color:#aaa39a;
-
-  font-size:10px;
-}
-
-.urgency strong{
-  color:#e2c477;
-}
-
-
-/* =====================================================
-   MAIN BUTTON
-===================================================== */
-
-.button-area{
-  margin-top:20px;
-}
-
-.main-btn{
-  width:100%;
-
-  max-width:400px;
-
-  min-height:57px;
-
-  display:inline-flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  padding:0 20px;
-
-  border-radius:11px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f3db97,
-      #e2c477
-    );
-
-  color:#111;
-
-  font-size:11px;
-
-  font-weight:950;
-
-  letter-spacing:.2px;
-
-  box-shadow:
-    0 15px 45px
-    rgba(226,196,119,.19);
-
-  transition:.2s ease;
-}
-
-.main-btn:hover{
-  transform:translateY(-3px);
-
-  box-shadow:
-    0 20px 55px
-    rgba(226,196,119,.28);
-}
-
-.button-note{
-  margin-top:9px;
-
-  color:#4d4943;
-
-  font-size:8px;
-}
-
-
-/* =====================================================
-   TRUST
-===================================================== */
-
-.trust{
-  margin-top:23px;
-
-  display:flex;
-
-  justify-content:center;
-
-  flex-wrap:wrap;
-
-  gap:9px;
-}
-
-.trust span{
-  color:#68635c;
-
-  font-size:8px;
-}
-
-.trust span:not(:last-child):after{
-  content:"•";
-
-  margin-left:9px;
-
-  color:#3d3934;
-}
-
-
-/* =====================================================
-   LEARNING SECTION
-===================================================== */
-
-.learn{
-  padding:65px 0 30px;
-}
-
-.section-label{
-  text-align:center;
-
-  color:#d5b76b;
-
-  font-size:8px;
-
-  font-weight:950;
-
-  letter-spacing:2px;
-}
-
-.section-title{
-  margin-top:10px;
-
-  text-align:center;
-
-  font-size:
-    clamp(
-      32px,
-      7vw,
-      55px
-    );
-
-  line-height:.94;
-
-  letter-spacing:-2.5px;
-
-  font-weight:950;
-}
-
-.section-text{
-  max-width:580px;
-
-  margin:14px auto 0;
-
-  text-align:center;
-
-  color:#6d6861;
-
-  font-size:11px;
-
-  line-height:1.65;
-}
-
-
-/* =====================================================
-   TOPICS
-===================================================== */
-
-.topics{
-  max-width:700px;
-
-  margin:30px auto 0;
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(2,1fr);
-
-  gap:9px;
-}
-
-.topic{
-  padding:20px;
-
-  border:1px solid #252525;
-
-  border-radius:13px;
-
-  background:#0b0b0b;
-
-  transition:.2s ease;
-}
-
-.topic:hover{
-  border-color:#40351f;
-
-  transform:translateY(-2px);
-}
-
-.topic-number{
-  color:#e2c477;
-
-  font-size:8px;
-
-  font-weight:950;
-
-  letter-spacing:1px;
-}
-
-.topic h3{
-  margin-top:11px;
-
-  font-size:13px;
-
-  font-weight:900;
-}
-
-.topic p{
-  margin-top:6px;
-
-  color:#605c56;
-
-  font-size:9px;
-
-  line-height:1.6;
-}
-
-
-/* =====================================================
-   LIMITED SLOTS
-===================================================== */
-
-.slots-section{
-  padding:60px 0;
-}
-
-.slots-card{
-  position:relative;
-
-  max-width:720px;
-
-  margin:auto;
-
-  padding:43px 20px;
-
-  text-align:center;
-
-  overflow:hidden;
-
-  border:1px solid #4b3d22;
-
-  border-radius:20px;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(226,196,119,.12),
-      transparent 58%
-    ),
-    #0c0c0b;
-
-  box-shadow:
-    0 30px 90px
-    rgba(0,0,0,.4);
-}
-
-.slots-card:before{
-  content:"";
-
-  position:absolute;
-
-  width:250px;
-  height:250px;
-
-  left:50%;
-  top:-180px;
-
-  transform:translateX(-50%);
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(226,196,119,.13),
-      transparent 70%
-    );
-}
-
-.slots-content{
-  position:relative;
-  z-index:2;
-}
-
-.slot-badge{
-  display:inline-block;
-
-  padding:7px 11px;
-
-  border:1px solid #4d4024;
-
-  border-radius:999px;
-
-  background:#12100d;
-
-  color:#e2c477;
-
-  font-size:8px;
-
-  font-weight:950;
-
-  letter-spacing:1.3px;
-}
-
-.slots-card h2{
-  margin-top:16px;
-
-  font-size:
-    clamp(
-      30px,
-      7vw,
-      51px
-    );
-
-  line-height:.94;
-
-  letter-spacing:-2.5px;
-
-  font-weight:950;
-}
-
-.slots-card p{
-  max-width:500px;
-
-  margin:14px auto 22px;
-
-  color:#706b64;
-
-  font-size:10px;
-
-  line-height:1.65;
-}
-
-
-/* =====================================================
-   FAQ
-===================================================== */
-
-.faq-section{
-  padding:20px 0 65px;
-}
-
-.faq-list{
-  max-width:700px;
-
-  margin:28px auto 0;
-}
-
-.faq-item{
-  border-top:1px solid #252525;
-}
-
-.faq-item:last-child{
-  border-bottom:1px solid #252525;
-}
-
-.faq-question{
-  width:100%;
-
-  border:0;
-
-  outline:0;
-
-  background:none;
-
-  color:#eee8df;
-
-  padding:19px 2px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  text-align:left;
-
-  cursor:pointer;
-
-  font-size:11px;
-
-  font-weight:900;
-}
-
-.faq-question span{
-  color:#e2c477;
-
-  font-size:18px;
-
-  font-weight:400;
-
-  transition:.2s;
-}
-
-.faq-answer{
-  display:none;
-
-  padding:
-    0
-    25px
-    18px
-    2px;
-
-  color:#65605a;
-
-  font-size:9px;
-
-  line-height:1.7;
-}
-
-.faq-item.active
-.faq-answer{
-  display:block;
-}
-
-.faq-item.active
-.faq-question span{
-  transform:rotate(45deg);
-}
-
-
-/* =====================================================
-   FINAL CTA
-===================================================== */
-
-.final{
-  padding:5px 0 100px;
-}
-
-.final-card{
-  max-width:720px;
-
-  margin:auto;
-
-  padding:45px 20px;
-
-  text-align:center;
-
-  border:1px solid #292929;
-
-  border-radius:19px;
-
-  background:#0a0a0a;
-}
-
-.final-card h2{
-  margin-top:10px;
-
-  font-size:
-    clamp(
-      32px,
-      7vw,
-      55px
-    );
-
-  line-height:.94;
-
-  letter-spacing:-2.5px;
-
-  font-weight:950;
-}
-
-.final-card p{
-  max-width:500px;
-
-  margin:14px auto 22px;
-
-  color:#69645d;
-
-  font-size:10px;
-
-  line-height:1.65;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-  padding:25px 0 90px;
-
-  border-top:1px solid #1d1d1d;
-
-  text-align:center;
-
-  color:#45413d;
-
-  font-size:8px;
-}
-
-
-/* =====================================================
-   MOBILE STICKY CTA
-===================================================== */
-
-.mobile-cta{
-  display:none;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:700px){
-
-  .hero{
-    padding-top:45px;
-  }
-
-  h1{
-    letter-spacing:-3px;
-  }
-
-  .hero-text{
-    font-size:12px;
-  }
-
-  .timer{
-    gap:5px;
-  }
-
-  .timer-box{
-    width:
-      calc(25vw - 9px);
-
-    max-width:68px;
-  }
-
-  .timer-number{
-    font-size:21px;
-  }
-
-  .topics{
-    grid-template-columns:1fr;
-  }
-
-  .slots-card{
-    padding:38px 17px;
-  }
-
-  .mobile-cta{
-    display:block;
-
-    position:fixed;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    z-index:9999;
-
-    padding:8px;
-
-    background:
-      rgba(5,5,5,.96);
-
-    backdrop-filter:blur(15px);
-
-    border-top:1px solid #332a1b;
-  }
-
-  .mobile-cta a{
-    height:48px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:9px;
-
-    background:
-      linear-gradient(
-        135deg,
-        #f3db97,
-        #e2c477
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Clock Tower — Husnain Edition | Silent Yahya</title>
+
+  <meta
+    name="description"
+    content="Discover Clock Tower — Husnain Edition by Silent Yahya."
+  >
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #0b0b0b;
+      --black-soft: #11100f;
+      --cream: #f5f0e8;
+      --cream-dark: #ded5c7;
+      --gold: #c9a66b;
+      --gold-light: #e4ca9a;
+      --text-muted: #aaa39a;
+      --line: rgba(201,166,107,0.24);
+      --white: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .top-bar {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 17px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
+    .container {
+      width: min(1080px, calc(100% - 40px));
+      margin: auto;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 90vh;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 70px;
+      padding: 80px 0;
+    }
+
+    .hero-copy {
+      order: 1;
+    }
+
+    .hero-image {
+      order: 2;
+      position: relative;
+    }
+
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 15%;
+      background: rgba(201,166,107,0.12);
+      filter: blur(70px);
+      z-index: -1;
+    }
+
+    .hero-image img {
+      max-height: 680px;
+      object-fit: contain;
+      filter: drop-shadow(0 35px 40px rgba(0,0,0,0.7));
+    }
+
+    .overline {
+      font-family: Arial, sans-serif;
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(58px, 8vw, 105px);
+      line-height: 0.88;
+      font-weight: 400;
+      letter-spacing: -5px;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--gold);
+    }
+
+    .edition-name {
+      margin-top: 30px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 5px;
+      color: var(--cream-dark);
+      text-transform: uppercase;
+    }
+
+    .hero-description {
+      max-width: 470px;
+      margin-top: 25px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .hero-price {
+      margin-top: 28px;
+      font-size: 30px;
+    }
+
+    .hero-price small {
+      font-family: Arial, sans-serif;
+      color: var(--text-muted);
+      font-size: 11px;
+      margin-left: 8px;
+    }
+
+
+    /* =========================
+       DIVIDER
+    ========================= */
+
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--line),
+        transparent
       );
+    }
 
-    color:#111;
 
-    font-size:10px;
+    /* =========================
+       INTRO
+    ========================= */
 
-    font-weight:950;
-  }
+    .intro {
+      padding: 110px 0;
+      text-align: center;
+    }
 
-  footer{
-    padding-bottom:75px;
-  }
+    .section-label {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
 
-}
+    .intro h2,
+    .section-heading {
+      font-weight: 400;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.08;
+    }
 
-</style>
+    .intro p {
+      max-width: 650px;
+      margin: 25px auto 0;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       PRODUCT GALLERY
+    ========================= */
+
+    .gallery-section {
+      padding: 100px 0;
+      background: var(--black-soft);
+    }
+
+    .gallery-header {
+      max-width: 650px;
+      margin-bottom: 45px;
+    }
+
+    .gallery-header p {
+      margin-top: 18px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 16px;
+    }
+
+    .gallery-main {
+      min-height: 680px;
+      background: #151412;
+      overflow: hidden;
+    }
+
+    .gallery-side {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .gallery-small {
+      min-height: 330px;
+      background: #151412;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .gallery div:hover img {
+      transform: scale(1.025);
+    }
+
+
+    /* =========================
+       FRAGRANCE SECTION
+    ========================= */
+
+    .fragrance {
+      padding: 110px 0;
+      background: var(--cream);
+      color: #181614;
+    }
+
+    .fragrance .section-label {
+      color: #806338;
+    }
+
+    .fragrance-intro {
+      max-width: 700px;
+    }
+
+    .fragrance-intro p {
+      margin-top: 20px;
+      color: #686158;
+      font-size: 15px;
+    }
+
+    .fragrance-grid {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(0,0,0,0.14);
+    }
+
+    .fragrance-card {
+      padding: 35px 25px;
+      border-right: 1px solid rgba(0,0,0,0.14);
+    }
+
+    .fragrance-card:last-child {
+      border-right: none;
+    }
+
+    .fragrance-number {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      color: #8d7044;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .fragrance-card h3 {
+      font-size: 23px;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .fragrance-card p {
+      color: #716a61;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       EDITION STORY
+    ========================= */
+
+    .story {
+      padding: 110px 0;
+    }
+
+    .story-content {
+      max-width: 760px;
+    }
+
+    .story-content p {
+      margin-top: 25px;
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+
+    .quote {
+      margin-top: 50px;
+      padding-left: 25px;
+      border-left: 1px solid var(--gold);
+      color: var(--cream-dark);
+      font-size: 22px;
+      line-height: 1.45;
+    }
+
+
+    /* =========================
+       PRODUCT DETAILS
+    ========================= */
+
+    .details-section {
+      padding: 100px 0;
+      background: var(--black-soft);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .details-image {
+      background: #151412;
+    }
+
+    .details-image img {
+      max-height: 620px;
+      object-fit: contain;
+    }
+
+    .details-list {
+      margin-top: 35px;
+      border-top: 1px solid var(--line);
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .detail .label {
+      color: var(--text-muted);
+    }
+
+    .detail .value {
+      text-align: right;
+      color: var(--cream);
+    }
+
+
+    /* =========================
+       ORDER SECTION
+    ========================= */
+
+    .order {
+      padding: 120px 20px;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(201,166,107,0.12),
+          transparent 50%
+        );
+    }
+
+    .order h2 {
+      font-size: clamp(38px, 6vw, 65px);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .order p {
+      max-width: 580px;
+      margin: 20px auto 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 35px;
+      padding: 16px 30px;
+      border-radius: 999px;
+      background: #25D366;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      transition: .25s ease;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      padding: 100px 0;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .faq-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    details {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 22px 0;
+    }
+
+    details:last-child {
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding-right: 30px;
+      font-size: 16px;
+      position: relative;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      padding-top: 15px;
+      color: var(--text-muted);
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 55px 20px 90px;
+      text-align: center;
+      background: #070707;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    .footer-logo span {
+      color: var(--gold);
+    }
+
+    footer p {
+      margin-top: 10px;
+      color: #686868;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 65px 0 80px;
+      }
+
+      .hero-copy {
+        order: 2;
+        text-align: center;
+      }
+
+      .hero-image {
+        order: 1;
+      }
+
+      .hero-image img {
+        max-height: 500px;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-main {
+        min-height: 520px;
+      }
+
+      .gallery-small {
+        min-height: 300px;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .fragrance-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fragrance-card {
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,0.14);
+      }
+
+      .fragrance-card:last-child {
+        border-bottom: none;
+      }
+    }
+
+
+    @media (max-width: 500px) {
+
+      .container {
+        width: min(100% - 30px, 1080px);
+      }
+
+      h1 {
+        font-size: 62px;
+      }
+
+      .hero-image img {
+        max-height: 400px;
+      }
+
+      .gallery-main {
+        min-height: 430px;
+      }
+
+      .gallery-small {
+        min-height: 250px;
+      }
+
+      .quote {
+        font-size: 19px;
+      }
+
+      .detail {
+        font-size: 12px;
+      }
+
+    }
+
+  </style>
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-     NAV
-===================================================== -->
+  <!-- =====================================================
+       IMPORTANT:
+       CHANGE ONLY THESE:
+       
+       1. hero-product.jpg
+       2. product-side.jpg
+       3. product-open.jpg
+       4. YOUR WHATSAPP NUMBER
+       
+       Example:
+       919876543210
+       ===================================================== -->
 
-<nav>
 
-  <div class="container nav-inner">
+  <!-- TOP BAR -->
 
-    <div class="logo">
-      DROPSHIP <span>LIVE</span>
-    </div>
-
-    <a
-      class="nav-btn"
-      href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-      target="_blank"
-      rel="noopener"
-    >
-      JOIN FREE →
-    </a>
-
+  <div class="top-bar">
+    Silent Yahya · Product Presentation
   </div>
 
-</nav>
 
+  <!-- HERO -->
 
+  <main>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+    <section class="hero container">
 
-<section class="hero">
+      <div class="hero-copy">
 
-  <div class="container">
-
-
-    <div class="kicker">
-
-      <span class="live-dot"></span>
-
-      FREE LIVE DROPSHIPPING WEBINAR
-
-    </div>
-
-
-    <h1>
-
-      Dropshipping
-
-      <br>
-
-      <span class="gold">
-        Zero Se
-      </span>
-
-      Start Karo.
-
-    </h1>
-
-
-    <p class="hero-text">
-
-      Dropshipping start karna hai
-      lekin samajh nahi aa raha
-      <strong>kahan se start karein?</strong>
-
-      Is live webinar mein
-      dropshipping ke fundamentals
-      simple way mein samjho.
-
-    </p>
-
-
-    <div class="date-row">
-
-      <div class="date-box">
-        🗓 <strong>30 AUGUST 2026</strong>
-      </div>
-
-      <div class="date-box">
-        📅 <strong>SUNDAY</strong>
-      </div>
-
-      <div class="date-box">
-        🔴 <strong>LIVE</strong>
-      </div>
-
-    </div>
-
-
-    <!-- COUNTDOWN -->
-
-    <div class="timer-heading">
-      WEBINAR STARTS IN
-    </div>
-
-
-    <div class="timer">
-
-      <div class="timer-box">
-
-        <div
-          class="timer-number"
-          id="days"
-        >
-          00
+        <div class="overline">
+          Silent Yahya
         </div>
 
-        <div class="timer-label">
-          DAYS
+        <h1>
+          Clock
+          <span>Tower</span>
+        </h1>
+
+        <div class="edition-name">
+          Husnain Edition
         </div>
 
-      </div>
-
-
-      <div class="timer-box">
-
-        <div
-          class="timer-number"
-          id="hours"
-        >
-          00
-        </div>
-
-        <div class="timer-label">
-          HOURS
-        </div>
-
-      </div>
-
-
-      <div class="timer-box">
-
-        <div
-          class="timer-number"
-          id="minutes"
-        >
-          00
-        </div>
-
-        <div class="timer-label">
-          MINUTES
-        </div>
-
-      </div>
-
-
-      <div class="timer-box">
-
-        <div
-          class="timer-number"
-          id="seconds"
-        >
-          00
-        </div>
-
-        <div class="timer-label">
-          SECONDS
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- URGENCY -->
-
-    <div class="urgency">
-
-      🔥
-
-      <strong>LIMITED LIVE SLOTS</strong>
-
-      — Join the WhatsApp Community
-      before registration closes.
-
-    </div>
-
-
-    <!-- CTA -->
-
-    <div class="button-area">
-
-      <a
-        class="main-btn"
-        href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-        target="_blank"
-        rel="noopener"
-      >
-        🔥 JOIN THE FREE WEBINAR →
-      </a>
-
-      <div class="button-note">
-
-        Free access • Webinar details shared on WhatsApp
-
-      </div>
-
-    </div>
-
-
-    <div class="trust">
-
-      <span>Beginner Friendly</span>
-
-      <span>Live Session</span>
-
-      <span>Free Entry</span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     WHAT YOU'LL LEARN
-===================================================== -->
-
-<section class="learn">
-
-  <div class="container">
-
-
-    <div class="section-label">
-      INSIDE THE WEBINAR
-    </div>
-
-
-    <h2 class="section-title">
-
-      Understand
-
-      <span class="gold">
-        Dropshipping.
-      </span>
-
-    </h2>
-
-
-    <p class="section-text">
-
-      Learn the basic process behind
-      starting a dropshipping business
-      instead of blindly following random
-      videos and strategies.
-
-    </p>
-
-
-    <div class="topics">
-
-
-      <div class="topic">
-
-        <div class="topic-number">
-          01
-        </div>
-
-        <h3>
-          How Dropshipping Works
-        </h3>
-
-        <p>
-          Understand the business model
-          and how orders move from
-          customer to supplier.
+        <p class="hero-description">
+          A premium attar presented through the distinctive identity
+          of Silent Yahya's Clock Tower — Husnain Edition.
         </p>
 
-      </div>
-
-
-      <div class="topic">
-
-        <div class="topic-number">
-          02
+        <div class="hero-price">
+          ₹999
+          <small>Husnain Edition</small>
         </div>
 
-        <h3>
-          Product Research
-        </h3>
-
-        <p>
-          Learn the fundamentals of
-          finding and evaluating
-          potential products.
-        </p>
-
       </div>
 
 
-      <div class="topic">
+      <div class="hero-image">
 
-        <div class="topic-number">
-          03
-        </div>
+        <!-- YOUR MAIN PRODUCT PHOTO -->
 
-        <h3>
-          Store Basics
-        </h3>
-
-        <p>
-          Understand the important
-          elements of a simple
-          ecommerce store.
-        </p>
-
-      </div>
-
-
-      <div class="topic">
-
-        <div class="topic-number">
-          04
-        </div>
-
-        <h3>
-          Marketing & Creatives
-        </h3>
-
-        <p>
-          Learn the basics of hooks,
-          creatives, audiences and
-          getting attention.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     LIMITED SLOTS CTA
-===================================================== -->
-
-<section class="slots-section">
-
-  <div class="container">
-
-    <div class="slots-card">
-
-      <div class="slots-content">
-
-
-        <div class="slot-badge">
-
-          🔥 LIMITED LIVE CAPACITY
-
-        </div>
-
-
-        <h2>
-
-          Don't miss the
-
-          <span class="gold">
-            live session.
-          </span>
-
-        </h2>
-
-
-        <p>
-
-          The webinar is completely free.
-          Join the WhatsApp Community to
-          receive the webinar updates
-          and access information.
-
-        </p>
-
-
-        <a
-          class="main-btn"
-          href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-          target="_blank"
-          rel="noopener"
-        >
-          RESERVE MY FREE SPOT →
-        </a>
-
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FAQ
-===================================================== -->
-
-<section class="faq-section">
-
-  <div class="container">
-
-
-    <div class="section-label">
-      FAQ
-    </div>
-
-
-    <h2 class="section-title">
-
-      Got
-
-      <span class="gold">
-        Questions?
-      </span>
-
-    </h2>
-
-
-    <div class="faq-list">
-
-
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
+        <img
+          src="hero-product.jpg"
+          alt="Clock Tower Husnain Edition by Silent Yahya"
         >
 
-          Is the webinar really free?
-
-          <span>+</span>
-
-        </button>
-
-
-        <div class="faq-answer">
-
-          Yes. There is no payment required
-          to join the webinar.
-
-        </div>
-
       </div>
 
+    </section>
 
 
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
-        >
-
-          When is the webinar?
-
-          <span>+</span>
-
-        </button>
+    <div class="gold-line"></div>
 
 
-        <div class="faq-answer">
+    <!-- INTRO -->
 
-          Sunday, 30 August 2026.
-
-          The exact access information
-          will be shared with the
-          WhatsApp Community.
-
-        </div>
-
-      </div>
-
-
-
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
-        >
-
-          Do I need previous experience?
-
-          <span>+</span>
-
-        </button>
-
-
-        <div class="faq-answer">
-
-          No. The webinar is designed
-          to explain the fundamentals
-          in a beginner-friendly way.
-
-        </div>
-
-      </div>
-
-
-
-      <div class="faq-item">
-
-        <button
-          class="faq-question"
-          type="button"
-        >
-
-          How do I get the webinar link?
-
-          <span>+</span>
-
-        </button>
-
-
-        <div class="faq-answer">
-
-          Join the WhatsApp Community.
-          Webinar updates and access
-          details will be shared there.
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FINAL CTA
-===================================================== -->
-
-<section class="final">
-
-  <div class="container">
-
-    <div class="final-card">
-
+    <section class="intro container">
 
       <div class="section-label">
+        The Edition
+      </div>
 
-        30 AUGUST 2026 • SUNDAY
+      <h2>
+        Created with intention.<br>
+        Presented with character.
+      </h2>
+
+      <p>
+        Clock Tower — Husnain Edition is a Silent Yahya release
+        created around a distinctive fragrance identity and
+        a carefully presented bottle.
+      </p>
+
+    </section>
+
+
+    <!-- GALLERY -->
+
+    <section class="gallery-section">
+
+      <div class="container">
+
+        <div class="gallery-header">
+
+          <div class="section-label">
+            The Bottle
+          </div>
+
+          <h2 class="section-heading">
+            Every detail matters.
+          </h2>
+
+          <p>
+            Explore the bottle from different angles and discover
+            the presentation of the Husnain Edition.
+          </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+          <div class="gallery-main">
+
+            <img
+              src="product-side.jpg"
+              alt="Clock Tower bottle side view"
+            >
+
+          </div>
+
+
+          <div class="gallery-side">
+
+            <div class="gallery-small">
+
+              <img
+                src="product-open.jpg"
+                alt="Clock Tower attar open bottle"
+              >
+
+            </div>
+
+
+            <div class="gallery-small">
+
+              <img
+                src="hero-product.jpg"
+                alt="Clock Tower Husnain Edition"
+              >
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
+    </section>
+
+
+    <!-- FRAGRANCE -->
+
+    <section class="fragrance">
+
+      <div class="container">
+
+        <div class="fragrance-intro">
+
+          <div class="section-label">
+            Fragrance
+          </div>
+
+          <h2 class="section-heading">
+            Discover the character
+            of Clock Tower.
+          </h2>
+
+          <p>
+            The fragrance is designed to develop throughout the
+            wearing experience, from its opening impression to
+            its lasting character.
+          </p>
+
+        </div>
+
+
+        <div class="fragrance-grid">
+
+          <div class="fragrance-card">
+
+            <div class="fragrance-number">
+              01 · OPENING
+            </div>
+
+            <h3>
+              First Impression
+            </h3>
+
+            <p>
+              The first moment of the fragrance — designed to
+              create a distinctive introduction.
+            </p>
+
+          </div>
+
+
+          <div class="fragrance-card">
+
+            <div class="fragrance-number">
+              02 · HEART
+            </div>
+
+            <h3>
+              Character
+            </h3>
+
+            <p>
+              As the fragrance develops, its central character
+              begins to reveal itself.
+            </p>
+
+          </div>
+
+
+          <div class="fragrance-card">
+
+            <div class="fragrance-number">
+              03 · FINISH
+            </div>
+
+            <h3>
+              Presence
+            </h3>
+
+            <p>
+              The final stage leaves the fragrance's signature
+              character on the skin.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="story container">
+
+      <div class="story-content">
+
+        <div class="section-label">
+          Silent Yahya
+        </div>
+
+        <h2 class="section-heading">
+          A fragrance with<br>
+          its own identity.
+        </h2>
+
+        <p>
+          Clock Tower — Husnain Edition represents the kind of
+          fragrance experience Silent Yahya aims to create:
+          distinctive, carefully presented and made to feel
+          personal to the person wearing it.
+        </p>
+
+        <div class="quote">
+          “A fragrance doesn't need to be loud to be remembered.”
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCT DETAILS -->
+
+    <section class="details-section">
+
+      <div class="container">
+
+        <div class="details-grid">
+
+
+          <div class="details-image">
+
+            <img
+              src="hero-product.jpg"
+              alt="Clock Tower Husnain Edition"
+            >
+
+          </div>
+
+
+          <div>
+
+            <div class="section-label">
+              Product Information
+            </div>
+
+            <h2 class="section-heading">
+              Clock Tower<br>
+              Husnain Edition
+            </h2>
+
+
+            <div class="details-list">
+
+              <div class="detail">
+                <span class="label">Brand</span>
+                <span class="value">Silent Yahya</span>
+              </div>
+
+              <div class="detail">
+                <span class="label">Product</span>
+                <span class="value">Clock Tower Attar</span>
+              </div>
+
+              <div class="detail">
+                <span class="label">Edition</span>
+                <span class="value">Husnain Edition</span>
+              </div>
+
+              <div class="detail">
+                <span class="label">Price</span>
+                <span class="value">₹999</span>
+              </div>
+
+              <div class="detail">
+                <span class="label">Availability</span>
+                <span class="value">Limited Edition</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ORDER -->
+
+    <section class="order">
+
+      <div class="section-label">
+        Interested?
+      </div>
 
       <h2>
-
-        Ready to learn
-
-        <span class="gold">
-          Dropshipping?
-        </span>
-
+        Ready to make<br>
+        Clock Tower yours?
       </h2>
 
-
       <p>
-
-        Join the free live webinar
-        and understand the fundamentals
-        from zero.
-
+        If you have questions about the fragrance, availability,
+        delivery or ordering, speak with us directly on WhatsApp.
       </p>
 
 
       <a
-        class="main-btn"
-        href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
+        class="whatsapp-btn"
+        href="https://wa.me/919999999999?text=Hi%2C%20I%27ve%20seen%20the%20Clock%20Tower%20Husnain%20Edition%20details%20and%20I%27m%20interested."
         target="_blank"
-        rel="noopener"
       >
-        🔥 JOIN THE FREE WEBINAR →
+        WhatsApp Silent Yahya
       </a>
 
+    </section>
 
+
+    <!-- FAQ -->
+
+    <section class="faq">
+
+      <div class="faq-container">
+
+        <div class="faq-heading">
+
+          <div class="section-label">
+            Questions
+          </div>
+
+          <h2 class="section-heading">
+            Frequently Asked
+          </h2>
+
+        </div>
+
+
+        <details>
+
+          <summary>
+            What is the price?
+          </summary>
+
+          <p>
+            Clock Tower — Husnain Edition is currently priced
+            at ₹999.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            How can I order?
+          </summary>
+
+          <p>
+            Simply contact Silent Yahya on WhatsApp and we will
+            guide you through the ordering process.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Is this a limited edition?
+          </summary>
+
+          <p>
+            Yes. Clock Tower is being presented as the
+            Husnain Edition, a limited Silent Yahya release.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Can I ask about the fragrance before ordering?
+          </summary>
+
+          <p>
+            Yes. You can ask us about the fragrance, availability
+            and ordering before making your purchase.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            How can I check availability?
+          </summary>
+
+          <p>
+            Message us directly on WhatsApp and we will confirm
+            the current availability.
+          </p>
+
+        </details>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-logo">
+      Silent <span>Yahya</span>
     </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-  Free educational webinar.
-  No guaranteed income or profit claims.
-
-</footer>
-
-
-
-<!-- =====================================================
-     MOBILE STICKY CTA
-===================================================== -->
-
-<div class="mobile-cta">
-
-  <a
-    href="https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH"
-    target="_blank"
-    rel="noopener"
-  >
-    🔥 JOIN FREE WEBINAR →
-  </a>
-
-</div>
-
-
-
-<script>
-
-/* =====================================================
-   SETTINGS
-===================================================== */
-
-
-/*
-   YOUR WEBINAR DATE + TIME
-
-   CURRENTLY SET TO:
-
-   30 AUGUST 2026
-   7:00 PM IST
-
-   If your webinar starts at another time,
-   change ONLY this line.
-
-   Example for 8 PM:
-
-   "2026-08-30T20:00:00+05:30"
-*/
-
-
-const WEBINAR_TIME =
-  "2026-08-30T19:00:00+05:30";
-
-
-/*
-   YOUR WHATSAPP COMMUNITY
-*/
-
-const WHATSAPP_URL =
-  "https://chat.whatsapp.com/CNI0zjmUxKF12rdCoTSSfH";
-
-
-
-/* =====================================================
-   WEBINAR COUNTDOWN
-===================================================== */
-
-function updateCountdown(){
-
-  const target =
-    new Date(
-      WEBINAR_TIME
-    ).getTime();
-
-
-  const now =
-    Date.now();
-
-
-  const difference =
-    target - now;
-
-
-  /*
-     Webinar started
-  */
-
-  if(
-    difference <= 0
-  ){
-
-    document
-      .getElementById("days")
-      .textContent = "00";
-
-
-    document
-      .getElementById("hours")
-      .textContent = "00";
-
-
-    document
-      .getElementById("minutes")
-      .textContent = "00";
-
-
-    document
-      .getElementById("seconds")
-      .textContent = "00";
-
-
-    document
-      .querySelector(".timer-heading")
-      .textContent =
-      "WEBINAR IS LIVE";
-
-
-    return;
-
-  }
-
-
-  const days =
-    Math.floor(
-      difference /
-      (
-        1000 *
-        60 *
-        60 *
-        24
-      )
-    );
-
-
-  const hours =
-    Math.floor(
-      (
-        difference %
-        (
-          1000 *
-          60 *
-          60 *
-          24
-        )
-      )
-      /
-      (
-        1000 *
-        60 *
-        60
-      )
-    );
-
-
-  const minutes =
-    Math.floor(
-      (
-        difference %
-        (
-          1000 *
-          60 *
-          60
-        )
-      )
-      /
-      (
-        1000 *
-        60
-      )
-    );
-
-
-  const seconds =
-    Math.floor(
-      (
-        difference %
-        (
-          1000 *
-          60
-        )
-      )
-      /
-      1000
-    );
-
-
-  document
-    .getElementById("days")
-    .textContent =
-    String(days)
-    .padStart(2,"0");
-
-
-  document
-    .getElementById("hours")
-    .textContent =
-    String(hours)
-    .padStart(2,"0");
-
-
-  document
-    .getElementById("minutes")
-    .textContent =
-    String(minutes)
-    .padStart(2,"0");
-
-
-  document
-    .getElementById("seconds")
-    .textContent =
-    String(seconds)
-    .padStart(2,"0");
-
-}
-
-
-/*
-   Start countdown
-*/
-
-updateCountdown();
-
-
-setInterval(
-  updateCountdown,
-  1000
-);
-
-
-
-/* =====================================================
-   FAQ
-===================================================== */
-
-document
-  .querySelectorAll(
-    ".faq-question"
-  )
-  .forEach(
-    function(button){
-
-      button.addEventListener(
-        "click",
-        function(){
-
-          const item =
-            button.parentElement;
-
-
-          item.classList.toggle(
-            "active"
-          );
-
-        }
-      );
-
-    }
-  );
-
-
-
-/* =====================================================
-   AUTOMATIC WHATSAPP REDIRECT
-===================================================== */
-
-
-/*
-   IMPORTANT:
-
-   Visitor opens page
-          ↓
-   3-second countdown
-          ↓
-   WhatsApp Community
-
-
-   The visitor can also click
-   JOIN NOW immediately.
-*/
-
-
-let redirectSeconds = 3;
-
-
-const redirectOverlay =
-  document.createElement(
-    "div"
-  );
-
-
-redirectOverlay.id =
-  "autoRedirectOverlay";
-
-
-redirectOverlay.innerHTML = `
-
-  <div class="auto-redirect-card">
-
-    <div class="auto-kicker">
-
-      🔥 FREE WEBINAR
-
-    </div>
-
-
-    <h3>
-
-      You're almost in.
-
-    </h3>
-
 
     <p>
-
-      Joining the WhatsApp Community
-      in
-
-      <strong
-        id="redirectCounter"
-      >
-        3
-      </strong>
-
+      Clock Tower — Husnain Edition
     </p>
 
+    <p>
+      © 2026 Silent Yahya
+    </p>
 
-    <div
-      class="redirect-progress"
-    >
+  </footer>
 
-      <div
-        id="redirectProgress"
-      ></div>
-
-    </div>
-
-
-    <a
-      class="redirect-now"
-      href="${WHATSAPP_URL}"
-    >
-
-      JOIN NOW →
-
-    </a>
-
-
-    <div class="redirect-small">
-
-      Get webinar updates & access details
-
-    </div>
-
-  </div>
-
-`;
-
-
-document.body.appendChild(
-  redirectOverlay
-);
-
-
-
-/* =====================================================
-   REDIRECT OVERLAY CSS
-===================================================== */
-
-const redirectCSS =
-  document.createElement(
-    "style"
-  );
-
-
-redirectCSS.innerHTML = `
-
-#autoRedirectOverlay{
-
-  position:fixed;
-
-  inset:0;
-
-  z-index:999999;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  padding:20px;
-
-  background:
-    rgba(0,0,0,.82);
-
-  backdrop-filter:
-    blur(12px);
-
-  animation:
-    overlayIn .25s ease;
-
-}
-
-
-@keyframes overlayIn{
-
-  from{
-    opacity:0;
-  }
-
-  to{
-    opacity:1;
-  }
-
-}
-
-
-.auto-redirect-card{
-
-  width:100%;
-
-  max-width:390px;
-
-  padding:31px 22px;
-
-  text-align:center;
-
-  border:
-    1px solid
-    #4b3d22;
-
-  border-radius:18px;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(226,196,119,.13),
-      transparent 60%
-    ),
-    #0c0c0c;
-
-  box-shadow:
-    0 35px 110px
-    rgba(0,0,0,.7);
-
-}
-
-
-.auto-kicker{
-
-  color:#e2c477;
-
-  font-size:8px;
-
-  font-weight:950;
-
-  letter-spacing:1.7px;
-
-}
-
-
-.auto-redirect-card h3{
-
-  margin-top:12px;
-
-  color:#f5f1e8;
-
-  font-size:25px;
-
-  line-height:1;
-
-  font-weight:950;
-
-}
-
-
-.auto-redirect-card p{
-
-  margin-top:11px;
-
-  color:#858078;
-
-  font-size:11px;
-
-}
-
-
-.auto-redirect-card p strong{
-
-  color:#e2c477;
-
-  font-size:22px;
-
-}
-
-
-.redirect-progress{
-
-  width:100%;
-
-  height:4px;
-
-  margin-top:19px;
-
-  overflow:hidden;
-
-  border-radius:20px;
-
-  background:#252525;
-
-}
-
-
-#redirectProgress{
-
-  width:100%;
-
-  height:100%;
-
-  transform-origin:left;
-
-  background:#e2c477;
-
-  transition:
-    transform 1s linear;
-
-}
-
-
-.redirect-now{
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  height:49px;
-
-  margin-top:17px;
-
-  border-radius:9px;
-
-  background:#25d366;
-
-  color:#fff;
-
-  font-size:10px;
-
-  font-weight:950;
-
-}
-
-
-.redirect-small{
-
-  margin-top:9px;
-
-  color:#4f4b45;
-
-  font-size:8px;
-
-}
-
-
-@media(max-width:450px){
-
-  .auto-redirect-card{
-
-    max-width:360px;
-
-    padding:28px 18px;
-
-  }
-
-}
-
-`;
-
-
-document.head.appendChild(
-  redirectCSS
-);
-
-
-
-/* =====================================================
-   START 3 SECOND REDIRECT
-===================================================== */
-
-const redirectCounter =
-  document.getElementById(
-    "redirectCounter"
-  );
-
-
-const redirectProgress =
-  document.getElementById(
-    "redirectProgress"
-  );
-
-
-let currentSeconds =
-  redirectSeconds;
-
-
-/*
-   Start full
-*/
-
-redirectProgress.style.transform =
-  "scaleX(1)";
-
-
-const redirectTimer =
-  setInterval(
-    function(){
-
-      currentSeconds--;
-
-
-      redirectCounter.textContent =
-        currentSeconds;
-
-
-      const progress =
-        currentSeconds /
-        redirectSeconds;
-
-
-      redirectProgress.style.transform =
-        "scaleX(" +
-        progress +
-        ")";
-
-
-      if(
-        currentSeconds <= 0
-      ){
-
-        clearInterval(
-          redirectTimer
-        );
-
-
-        /*
-           Redirect visitor
-        */
-
-        window.location.href =
-          WHATSAPP_URL;
-
-      }
-
-    },
-    1000
-  );
-
-</script>
 
 </body>
 </html>
+```
